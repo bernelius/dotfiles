@@ -6,7 +6,14 @@ nvims() {
     nvim "$(fzf --preview="bat --color=always {}")"
 }
 
-. "$HOME/.local/bin/env"
+case ":${PATH}:" in
+    *:"$HOME/.local/bin":*)
+        ;;
+    *)
+        # Prepending path in case a system-installed binary needs to be overridden
+        export PATH="$HOME/.local/bin:$PATH"
+        ;;
+esac
 
 source <(fzf --zsh)
 
