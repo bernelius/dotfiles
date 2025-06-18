@@ -11,6 +11,7 @@ case ":${PATH}:" in
         ;;
     *)
         # Prepending path in case a system-installed binary needs to be overridden
+	mkdir -p "$HOME/.local/bin"
         export PATH="$HOME/.local/bin:$PATH"
         ;;
 esac
