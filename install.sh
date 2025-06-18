@@ -62,5 +62,5 @@ done
 
 # Turn off dotglob to restore default bash behavior
 shopt -u dotglob
-
+rm ~/README.md
 echo "Dotfile linking complete."
