@@ -43,6 +43,10 @@ vim.opt.wrap = false
 vim.g.mapleader = ","
 vim.g.maplocalleader = "--"
 
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
+vim.keymap.set("i", "<leader>p", '<C-r>+')
+
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
 
