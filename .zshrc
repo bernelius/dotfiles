@@ -27,3 +27,4 @@ function y() {
 	rm -f -- "$tmp"
 }
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+alias rpr="cd /mnt/g/Black\ Banana\ Studios/REAPER\ (x64)/Scripts/Bob"
