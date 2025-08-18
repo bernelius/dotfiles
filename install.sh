@@ -18,7 +18,7 @@ link_dotfile() {
 
     # Skip common junk files and the script itself
     if [[ "$filename" == "." || "$filename" == ".." || "$filename" == ".git" || "$filename" == "install.sh" ]]; then
-        return # Exit this function call
+        return
     fi
 
 

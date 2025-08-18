@@ -1,4 +1,4 @@
-alias analbook='open "/Users/bobhegdal/Documents/SYS1000/SAaD, 8th.pdf"'
+alias javabook='open "/Users/bobhegdal/Documents/Books/Introduction to Java Programming and Data Structures - Daniel Y. Liang.pdf"'
 alias osbook='open "/Users/bobhegdal/Documents/OS/Andrew Tanenbaum, Herbert Bos - Modern Operating Systems, 5th Global Edition-Pearson (2024).pdf"'
 alias docs='cd ~/Documents/'
 alias books='cd ~/Documents/books/'
@@ -28,3 +28,4 @@ function y() {
 }
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 alias rpr="cd /mnt/g/Black\ Banana\ Studios/REAPER\ (x64)/Scripts/Bob"
+export EDITOR="nvim"
