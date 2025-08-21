@@ -2,10 +2,12 @@ alias javabook='open "/Users/bobhegdal/Documents/Books/Introduction to Java Prog
 alias osbook='open "/Users/bobhegdal/Documents/OS/Andrew Tanenbaum, Herbert Bos - Modern Operating Systems, 5th Global Edition-Pearson (2024).pdf"'
 alias docs='cd ~/Documents/'
 alias books='cd ~/Documents/books/'
+alias rpr="cd /mnt/g/Black\ Banana\ Studios/REAPER\ \(x64\)/Scripts/Bob"
+alias vim="nvim"
 nvims() {
     nvim "$(fzf --preview="bat --color=always {}")"
 }
-
+export PS1='%n %3~ %# '
 case ":${PATH}:" in
     *:"$HOME/.local/bin":*)
         ;;
@@ -27,5 +29,8 @@ function y() {
 	rm -f -- "$tmp"
 }
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+<<<<<<< HEAD
 alias rpr="cd /mnt/g/Black\ Banana\ Studios/REAPER\ (x64)/Scripts/Bob"
 export EDITOR="nvim"
+=======
+>>>>>>> 212d512 (moved a line)
