@@ -29,8 +29,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
-<<<<<<< HEAD
 alias rpr="cd /mnt/g/Black\ Banana\ Studios/REAPER\ (x64)/Scripts/Bob"
 export EDITOR="nvim"
-=======
->>>>>>> 212d512 (moved a line)
