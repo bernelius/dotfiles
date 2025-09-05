@@ -28,7 +28,7 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH"
 alias rpr="cd /mnt/g/Black\ Banana\ Studios/REAPER\ (x64)/Scripts/Bob"
 export EDITOR="nvim"
 

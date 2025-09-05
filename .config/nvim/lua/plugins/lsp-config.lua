@@ -17,8 +17,24 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+      local configs = require("lspconfig.configs")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+--    this particular lsp is useless, but this is the format for
+--    configuring an lsp from outside mason.
+
+--      if not configs.dts_lsp then
+--        configs.dts_lsp = {
+--          default_config = {
+--            cmd = { "dts-lsp" },
+--            filetypes = { "dts" },
+--            root_dir = lspconfig.util.root_pattern(".git"),
+--            single_file_support = true,
+--          },
+--        }
+--      end
+--
+--      lspconfig.dts_lsp.setup({ capabilities = capabilities })
       lspconfig.jdtls.setup({ capabilities = capabilities })
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.ts_ls.setup({ capabilities = capabilities })
