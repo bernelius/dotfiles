@@ -80,6 +80,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.diagnostic.config({
+  float = {
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
   severity_sort = true,
   virtual_text = {
     -- virt_text_pos = "right_align",
@@ -93,3 +99,4 @@ vim.diagnostic.config({
 vim.keymap.set({ "n", "v" }, "<leader>dt", function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end)
+vim.keymap.set({ "n", "v" }, "<leader>df", vim.diagnostic.open_float)
