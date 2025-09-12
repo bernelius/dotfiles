@@ -51,7 +51,15 @@ vim.g.maplocalleader = "--"
 
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
-vim.keymap.set("i", "<leader>p", "<C-r>+")
+vim.keymap.set( "i", "<leader>p", "<C-r>+")
+vim.keymap.set( "n", "<leader><Left>", ":bnext<CR>")
+vim.keymap.set( "n", "<leader><Down>", ":blast<CR>")
+vim.keymap.set( "n", "<leader><Up>", ":bfirst<CR>")
+vim.keymap.set( "n", "<leader><Right>", ":bprev<CR>")
+vim.keymap.set( "n", "<leader>h", ":bprev<CR>")
+vim.keymap.set( "n", "<leader>j", ":blast<CR>")
+vim.keymap.set( "n", "<leader>k", ":bfirst<CR>")
+vim.keymap.set( "n", "<leader>l", ":bprev<CR>")
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")

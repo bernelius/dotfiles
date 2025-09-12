@@ -1,8 +1,6 @@
 # dotfiles
-dotfiles for macOS/linux
+Personal dotfiles for macOS/linux
 
-to install:<cd>
-Clone the repo<br>
-cd into it<br>
+# Install:
 <code>chmod +x install.sh
 ./install.sh</code>
