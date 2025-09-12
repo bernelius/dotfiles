@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "jdtls", "ts_ls", "clangd", "html", "jinja_lsp", "cssls", "ruff", "pyright", "tailwindcss" },
+        ensure_installed = { "lua_ls", "jdtls", "ts_ls", "clangd", "html", "jinja_lsp", "cssls", "ruff", "pyright", "tailwindcss", "eslint" },
       })
     end,
   },
@@ -36,6 +36,7 @@ return {
 --
 --      lspconfig.dts_lsp.setup({ capabilities = capabilities })
 --      lspconfig.djlint.setup({ capabilities = capabilities })
+      lspconfig.eslint.setup({ capabilities = capabilities })
       lspconfig.djlsp.setup({ capabilities = capabilities })
       lspconfig.tailwindcss.setup({ capabilities = capabilities })
       lspconfig.jdtls.setup({ capabilities = capabilities })
@@ -48,7 +49,17 @@ return {
 --        lang = { "python" },
 --        filetypes = { "html", "htmldjango" },
 --      })
-      lspconfig.cssls.setup({ capabilities = capabilities })
+      lspconfig.cssls.setup({
+        capabilities = capabilities,
+        settings = {
+          css = {
+            validate = true,
+            lint = {
+              unknownAtRules = "ignore"
+            }
+          }
+        }
+      })
       lspconfig.ruff.setup({ capabilities = capabilities })
       lspconfig.pyright.setup({
         settings = {
