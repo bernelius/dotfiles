@@ -38,5 +38,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=
 zstyle ':completion:*' menu select
 
 eval "$(direnv hook zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 fastfetch
