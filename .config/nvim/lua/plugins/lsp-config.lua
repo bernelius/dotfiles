@@ -9,89 +9,126 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "jdtls", "ts_ls", "clangd", "html", "jinja_lsp", "cssls", "ruff", "pyright", "tailwindcss", "eslint" },
+        ensure_installed = {
+          "lua_ls",
+          "jdtls",
+          "ts_ls",
+          "clangd",
+          "html",
+          "jinja_lsp",
+          "cssls",
+          "ruff",
+          "pyright",
+          "tailwindcss",
+          "eslint",
+          -- not a lspconfig server name
+          -- "djlsp",
+        },
       })
     end,
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
-      local configs = require("lspconfig.configs")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
---    this particular lsp is useless, but this is the format for
---    configuring an lsp from outside mason.
-
---      if not configs.dts_lsp then
---        configs.dts_lsp = {
---          default_config = {
---            cmd = { "dts-lsp" },
---            filetypes = { "dts" },
---            root_dir = lspconfig.util.root_pattern(".git"),
---            single_file_support = true,
---          },
---        }
---      end
---
---      lspconfig.dts_lsp.setup({ capabilities = capabilities })
---      lspconfig.djlint.setup({ capabilities = capabilities })
-      lspconfig.eslint.setup({ capabilities = capabilities })
-      lspconfig.djlsp.setup({ capabilities = capabilities })
-      lspconfig.tailwindcss.setup({ capabilities = capabilities })
-      lspconfig.jdtls.setup({ capabilities = capabilities })
-      lspconfig.lua_ls.setup({ capabilities = capabilities })
-      lspconfig.ts_ls.setup({ capabilities = capabilities })
-      lspconfig.clangd.setup({ capabilities = capabilities })
-      lspconfig.html.setup({ capabilities = capabilities })
---      lspconfig.jinja_lsp.setup({
---        capabilities = capabilities,
---        lang = { "python" },
---        filetypes = { "html", "htmldjango" },
---      })
-      lspconfig.cssls.setup({
+      -- Define configs
+      vim.lsp.config["eslint"] = { capabilities = capabilities }
+      vim.lsp.config["tailwindcss"] = { capabilities = capabilities }
+      vim.lsp.config["jdtls"] = { capabilities = capabilities }
+      vim.lsp.config["lua_ls"] = {
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim", "reaper" },
+            }
+          }
+        }
+      }
+      vim.lsp.config["ts_ls"] = { capabilities = capabilities }
+      vim.lsp.config["clangd"] = { capabilities = capabilities }
+      vim.lsp.config["html"] = { capabilities = capabilities }
+      vim.lsp.config["cssls"] = {
         capabilities = capabilities,
         settings = {
           css = {
             validate = true,
             lint = {
-              unknownAtRules = "ignore"
-            }
-          }
-        }
-      })
-      lspconfig.ruff.setup({ capabilities = capabilities })
-      lspconfig.pyright.setup({
-        settings = {
-          pyright = {
-            -- Using Ruff's import organizer
-            disableOrganizeImports = true,
-          },
-          python = {
-            analysis = {
-              -- Ignore all files for analysis to exclusively use Ruff for linting
-              ignore = { '*' },
+              unknownAtRules = "ignore",
             },
           },
         },
-      })
+      }
+      vim.lsp.config["djlsp"] = { capabilities = capabilities }
+      vim.lsp.config["ruff"] = { capabilities = capabilities }
+      vim.lsp.config["pyright"] = {
+        capabilities = capabilities,
+        settings = {
+          pyright = { disableOrganizeImports = true },
+          python = { analysis = { ignore = { "*" } } },
+        },
+      }
 
+      -- Keymaps
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set({ "n", "c" }, "<leader>ca", vim.lsp.buf.code_action, {})
+
+      -- Disable Ruff hover
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
         callback = function(args)
           local client = vim.lsp.get_client_by_id(args.data.client_id)
-          if client == nil then
-            return
-          end
-          if client.name == "ruff" then
-            -- Disable hover in favor of Pyright
+          if client and client.name == "ruff" then
             client.server_capabilities.hoverProvider = false
           end
         end,
-        desc = "LSP: Disable hover capability from Ruff",
+      })
+
+      -- Autostart servers
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+        callback = function() vim.lsp.start(vim.lsp.config["eslint"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "scss", "html" },
+        callback = function() vim.lsp.start(vim.lsp.config["tailwindcss"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "java" },
+        callback = function() vim.lsp.start(vim.lsp.config["jdtls"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "lua" },
+        callback = function() vim.lsp.start(vim.lsp.config["lua_ls"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+        callback = function() vim.lsp.start(vim.lsp.config["ts_ls"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "c", "cpp" },
+        callback = function() vim.lsp.start(vim.lsp.config["clangd"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "html" },
+        callback = function() vim.lsp.start(vim.lsp.config["html"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "css", "scss", "less" },
+        callback = function() vim.lsp.start(vim.lsp.config["cssls"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "htmldjango" },
+        callback = function() vim.lsp.start(vim.lsp.config["djlsp"]) end,
+      })
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "python" },
+        callback = function()
+          vim.lsp.start(vim.lsp.config["ruff"])
+          vim.lsp.start(vim.lsp.config["pyright"])
+        end,
       })
     end,
   },
