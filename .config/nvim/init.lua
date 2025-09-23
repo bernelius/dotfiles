@@ -100,3 +100,6 @@ vim.keymap.set({ "n", "v" }, "<leader>dt", function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end)
 vim.keymap.set({ "n", "v" }, "<leader>df", vim.diagnostic.open_float)
+
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<BS>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
