@@ -1,0 +1,162 @@
+return {
+	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
+	--  {
+	--    "williamboman/mason-lspconfig.nvim",
+	--    config = function()
+	--      require("mason-lspconfig").setup({
+	--        ensure_installed = {
+	--          "lua_ls",
+	--          "jdtls",
+	--          "ts_ls",
+	--          "clangd",
+	--          "html",
+	--          "jinja_lsp",
+	--          "cssls",
+	--          "ruff",
+	--          "pyright",
+	--          "tailwindcss",
+	--          "eslint",
+	--          -- not a lspconfig server name
+	--          -- "djlsp",
+	--        },
+	--      })
+	--    end,
+	--  },
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+			-- Define configs
+			vim.lsp.config["eslint"] = { capabilities = capabilities }
+			vim.lsp.config["tailwindcss"] = { capabilities = capabilities }
+			vim.lsp.config["jdtls"] = { capabilities = capabilities }
+			vim.lsp.config["lua_ls"] = {
+				capabilities = capabilities,
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim", "reaper" },
+						},
+					},
+				},
+			}
+			vim.lsp.config["ts_ls"] = { capabilities = capabilities }
+			vim.lsp.config["clangd"] = { capabilities = capabilities }
+			vim.lsp.config["html"] = { capabilities = capabilities }
+			vim.lsp.config["cssls"] = {
+				capabilities = capabilities,
+				settings = {
+					css = {
+						validate = true,
+						lint = {
+							unknownAtRules = "ignore",
+						},
+					},
+				},
+			}
+			vim.lsp.config["djlsp"] = { capabilities = capabilities }
+			vim.lsp.config["ruff"] = { capabilities = capabilities }
+			vim.lsp.config["pyright"] = {
+				capabilities = capabilities,
+				--        settings = {
+				--          pyright = { disableOrganizeImports = true },
+				--          python = { analysis = { ignore = { "*" } } },
+				--        },
+			}
+
+			-- Keymaps
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+			vim.keymap.set({ "n", "c" }, "<leader>ca", vim.lsp.buf.code_action, {})
+
+			-- Disable Ruff hover
+			vim.api.nvim_create_autocmd("LspAttach", {
+				group = vim.api.nvim_create_augroup("lsp_attach_disable_ruff_hover", { clear = true }),
+				callback = function(args)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
+					if client and client.name == "ruff" then
+						client.server_capabilities.hoverProvider = false
+					end
+				end,
+			})
+
+			-- Autostart servers
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+				callback = function()
+					vim.lsp.start({
+						name = "eslint",
+						cmd = { "vscode-eslint-language-server", "--stdio" },
+						root_dir = vim.fs.dirname(
+							vim.fs.find({ ".eslintrc.js", "eslint.config.js", ".git" }, { upward = true })[1] or vim.loop.cwd()
+						),
+					}
+)
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "scss", "html" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["tailwindcss"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "java" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["jdtls"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "lua" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["lua_ls"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["ts_ls"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "c", "cpp" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["clangd"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "html" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["html"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "css", "scss", "less" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["cssls"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "htmldjango" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["djlsp"])
+				end,
+			})
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "python" },
+				callback = function()
+					vim.lsp.start(vim.lsp.config["ruff"])
+					vim.lsp.start(vim.lsp.config["pyright"])
+
+					vim.lsp.config["pyright"].settings.python.analysis.ignore = { "*" }
+				end,
+			})
+		end,
+	},
+}
