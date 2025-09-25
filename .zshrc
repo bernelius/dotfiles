@@ -39,5 +39,6 @@ zstyle ':completion:*' menu select
 
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh --cmd cd)"
+alias ls='eza --icons=always --group-directories-first --git'
 
 fastfetch
