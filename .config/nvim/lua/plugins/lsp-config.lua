@@ -44,6 +44,7 @@ return {
       lspconfig.ts_ls.setup({ capabilities = capabilities })
       lspconfig.clangd.setup({ capabilities = capabilities })
       lspconfig.html.setup({ capabilities = capabilities })
+      lspconfig.bashls.setup({ capabilities = capabilities })
 --      lspconfig.jinja_lsp.setup({
 --        capabilities = capabilities,
 --        lang = { "python" },

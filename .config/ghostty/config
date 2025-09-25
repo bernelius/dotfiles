@@ -54,7 +54,7 @@
 # custom-shader = shaders/glow-rgbsplit-twitchy.glsl
 # custom-shader = shaders/gradient-background.glsl
 # custom-shader = shaders/matrix-hallway.glsl
- custom-shader = shaders/retro-terminal.glsl
+# custom-shader = shaders/retro-terminal.glsl
 # custom-shader = shaders/tft.glsl
 # custom-shader = shaders/underwater.glsl
 theme = catppuccin-mocha.conf

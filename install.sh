@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-DOTFILES_DIR="$(pwd)"
+#
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Enable dotglob for processing hidden files in loops
 shopt -s dotglob
@@ -12,12 +13,13 @@ echo "Linking dotfiles from $DOTFILES_DIR"
 #   $1: source_path (path in dotfiles repo)
 #   $2: target_path (path in HOME directory)
 link_dotfile() {
+    local filename
     local source_path="$1"
     local target_path="$2"
-    local filename=$(basename "$source_path")
+    filename=$(basename "$source_path")
 
-    # Skip common junk files and the script itself
-    if [[ "$filename" == "." || "$filename" == ".." || "$filename" == ".git" || "$filename" == "install.sh" ]]; then
+
+    if [[ "$filename" == "." || "$filename" == ".." || "$filename" == ".git" || "$filename" == "install.sh" || "$filename" == "cleanup.sh" ]]; then
         return
     fi
 
@@ -28,8 +30,9 @@ link_dotfile() {
 
         # Recurse into the directory's contents
         for item in "$source_path"/* "$source_path"/.*; do
+            local item_basename
             # Get the base name of the item within the directory
-            local item_basename=$(basename "$item")
+            item_basename=$(basename "$item")
 
             # Avoid recursive calls for . and .. when iterating contents
             if [[ "$item_basename" == "." || "$item_basename" == ".." ]]; then
@@ -62,5 +65,4 @@ done
 
 # Turn off dotglob to restore default bash behavior
 shopt -u dotglob
-rm ~/README.md
 echo "Dotfile linking complete."

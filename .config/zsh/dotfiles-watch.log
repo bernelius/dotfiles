@@ -1,0 +1,128 @@
+2025-09-25 22:18:13 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 22:18:13 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:18:13 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:18:14 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:18:15 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:18:16 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:18:17 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:18:18 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:18:19 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-watch.log -> /Users/bobhegdal/.config/zsh/dotfiles-watch.log. Reason: file already exists
+2025-09-25 22:19:16 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 22:19:16 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.zsh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.zsh. Reason: file already exists
+2025-09-25 22:19:55 Linked /Users/bobhegdal/dotfiles/.config/zsh/openthisfile.txt -> /Users/bobhegdal/.config/zsh/openthisfile.txt
+2025-09-25 22:24:50 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 22:24:50 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.zsh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.zsh. Reason: file already exists
+2025-09-25 22:25:53 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 22:25:53 Skipped /Users/bobhegdal/dotfiles/.zshrc -> /Users/bobhegdal/.zshrc. Reason: file already exists
+2025-09-25 22:27:54 Linked /Users/bobhegdal/dotfiles/.config/zsh/this_is-a-file -> /Users/bobhegdal/.config/zsh/this_is-a-file
+2025-09-25 22:28:17 Linked /Users/bobhegdal/dotfiles/.config/zsh/this also is a file.txt -> /Users/bobhegdal/.config/zsh/this also is a file.txt
+2025-09-25 22:31:06 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 22:31:06 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 22:37:27 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 22:37:27 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 22:42:03 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 22:42:03 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 22:43:35 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 22:43:35 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 22:44:28 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 22:44:28 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 22:47:55 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 22:47:55 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:09:54 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 23:09:54 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:10:08 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 23:10:08 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:10:08 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:12:08 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 23:12:08 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:19:44 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 23:19:44 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 23:23:49 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 23:23:49 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 23:29:21 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 23:29:22 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 23:32:12 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 23:32:12 Skipped /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh. Reason: file already exists
+2025-09-25 23:32:54 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 23:32:54 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:38:01 Linked /Users/bobhegdal/dotfiles/4913 -> /Users/bobhegdal/4913
+2025-09-25 23:38:01 Linked /Users/bobhegdal/dotfiles/install.sh -> /Users/bobhegdal/install.sh
+2025-09-25 23:38:01 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 23:38:01 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:43:28 Skipped /Users/bobhegdal/dotfiles/.DS_Store -> /Users/bobhegdal/.DS_Store. Reason: file already exists
+2025-09-25 23:43:32 Linked /Users/bobhegdal/dotfiles/.config/.DS_Store -> /Users/bobhegdal/.config/.DS_Store
+2025-09-25 23:43:32 Skipped /Users/bobhegdal/dotfiles/.DS_Store -> /Users/bobhegdal/.DS_Store. Reason: file already exists
+2025-09-25 23:48:49 Linked /Users/bobhegdal/dotfiles/harold.txt -> /Users/bobhegdal/harold.txt
+2025-09-25 23:50:26 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-25 23:50:26 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-25 23:50:37 Skipped /Users/bobhegdal/dotfiles/gaga -> /Users/bobhegdal/gaga. Reason: file already exists
+2025-09-25 23:50:45 Skipped /Users/bobhegdal/dotfiles/hardlo.txt -> /Users/bobhegdal/hardlo.txt. Reason: file already exists
+2025-09-25 23:56:15 Linked /Users/bobhegdal/dotfiles/.git/refs/remotes/dotfiles/HEAD.lock -> /Users/bobhegdal/.git/refs/remotes/dotfiles/HEAD.lock
+2025-09-25 23:56:15 Linked /Users/bobhegdal/dotfiles/.git/objects/maintenance.lock -> /Users/bobhegdal/.git/objects/maintenance.lock
+2025-09-25 23:56:19 Linked /Users/bobhegdal/dotfiles/.git/objects/5d/8cb07308c62b79e84175d0e12fbded9ec72360 -> /Users/bobhegdal/.git/objects/5d/8cb07308c62b79e84175d0e12fbded9ec72360
+2025-09-25 23:56:19 Linked /Users/bobhegdal/dotfiles/.git/objects/5d/tmp_obj_xvvqxW -> /Users/bobhegdal/.git/objects/5d/tmp_obj_xvvqxW
+2025-09-25 23:56:19 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-25 23:56:21 Linked /Users/bobhegdal/dotfiles/.git/objects/b0/313b154d29c360ec9e68b95089bdd810409b15 -> /Users/bobhegdal/.git/objects/b0/313b154d29c360ec9e68b95089bdd810409b15
+2025-09-25 23:56:21 Linked /Users/bobhegdal/dotfiles/.git/objects/b0/tmp_obj_IKhI8F -> /Users/bobhegdal/.git/objects/b0/tmp_obj_IKhI8F
+2025-09-25 23:56:21 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-25 23:56:22 Linked /Users/bobhegdal/dotfiles/.git/objects/13/7a662f74efdfebb6778a731e2574ea32733146 -> /Users/bobhegdal/.git/objects/13/7a662f74efdfebb6778a731e2574ea32733146
+2025-09-25 23:56:22 Skipped /Users/bobhegdal/dotfiles/.git/objects/13 -> /Users/bobhegdal/.git/objects/13. Reason: file already exists
+2025-09-25 23:56:22 Linked /Users/bobhegdal/dotfiles/.git/objects/13/tmp_obj_Ja99fx -> /Users/bobhegdal/.git/objects/13/tmp_obj_Ja99fx
+2025-09-25 23:56:22 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-25 23:56:23 Linked /Users/bobhegdal/dotfiles/.git/objects/7b/01cbd6b1c4f7bc5430a84ed0660be679d3ec6a -> /Users/bobhegdal/.git/objects/7b/01cbd6b1c4f7bc5430a84ed0660be679d3ec6a
+2025-09-25 23:56:23 Linked /Users/bobhegdal/dotfiles/.git/objects/7b/tmp_obj_flkxlM -> /Users/bobhegdal/.git/objects/7b/tmp_obj_flkxlM
+2025-09-25 23:56:23 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-25 23:56:24 Linked /Users/bobhegdal/dotfiles/.git/objects/b1/a547d9054667ee4f570af089a45cd8a640feb3 -> /Users/bobhegdal/.git/objects/b1/a547d9054667ee4f570af089a45cd8a640feb3
+2025-09-25 23:56:24 Linked /Users/bobhegdal/dotfiles/.git/objects/b1/tmp_obj_LL4Dss -> /Users/bobhegdal/.git/objects/b1/tmp_obj_LL4Dss
+2025-09-25 23:56:24 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-25 23:56:24 Linked /Users/bobhegdal/dotfiles/.git/objects/d8/a07d7edbd808b56d2005156328c8957a10305f -> /Users/bobhegdal/.git/objects/d8/a07d7edbd808b56d2005156328c8957a10305f
+2025-09-25 23:56:24 Skipped /Users/bobhegdal/dotfiles/.git/objects/d8 -> /Users/bobhegdal/.git/objects/d8. Reason: file already exists
+2025-09-25 23:56:24 Linked /Users/bobhegdal/dotfiles/.git/objects/d8/tmp_obj_IKGZ9z -> /Users/bobhegdal/.git/objects/d8/tmp_obj_IKGZ9z
+2025-09-25 23:56:24 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-25 23:56:25 Linked /Users/bobhegdal/dotfiles/.git/objects/92/e0cd17186293ea3cfa8b0b0909dd6bf59e86e4 -> /Users/bobhegdal/.git/objects/92/e0cd17186293ea3cfa8b0b0909dd6bf59e86e4
+2025-09-25 23:56:25 Skipped /Users/bobhegdal/dotfiles/.git/objects/92 -> /Users/bobhegdal/.git/objects/92. Reason: file already exists
+2025-09-25 23:56:25 Linked /Users/bobhegdal/dotfiles/.git/objects/92/tmp_obj_RWUnfr -> /Users/bobhegdal/.git/objects/92/tmp_obj_RWUnfr
+2025-09-25 23:56:25 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:00:04 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-26 00:00:04 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-26 00:00:41 Linked /Users/bobhegdal/dotfiles/.git/refs/remotes/dotfiles/HEAD.lock -> /Users/bobhegdal/.git/refs/remotes/dotfiles/HEAD.lock
+2025-09-26 00:00:41 Linked /Users/bobhegdal/dotfiles/.git/objects/maintenance.lock -> /Users/bobhegdal/.git/objects/maintenance.lock
+2025-09-26 00:00:42 Linked /Users/bobhegdal/dotfiles/.git/objects/63/c19a251bb501aefaec0b54f1afe70411e95632 -> /Users/bobhegdal/.git/objects/63/c19a251bb501aefaec0b54f1afe70411e95632
+2025-09-26 00:00:42 Skipped /Users/bobhegdal/dotfiles/.git/objects/63 -> /Users/bobhegdal/.git/objects/63. Reason: file already exists
+2025-09-26 00:00:42 Linked /Users/bobhegdal/dotfiles/.git/objects/63/tmp_obj_CkRsHQ -> /Users/bobhegdal/.git/objects/63/tmp_obj_CkRsHQ
+2025-09-26 00:00:42 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:00:43 Linked /Users/bobhegdal/dotfiles/.git/objects/42/ae8bcc2363ce73b1fcb75163cbe63cf51c6845 -> /Users/bobhegdal/.git/objects/42/ae8bcc2363ce73b1fcb75163cbe63cf51c6845
+2025-09-26 00:00:43 Linked /Users/bobhegdal/dotfiles/.git/objects/42/tmp_obj_ootuWP -> /Users/bobhegdal/.git/objects/42/tmp_obj_ootuWP
+2025-09-26 00:00:43 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:00:47 Linked /Users/bobhegdal/dotfiles/.git/objects/04/16c252c645abecca5259d6da5dcbd389e1bc24 -> /Users/bobhegdal/.git/objects/04/16c252c645abecca5259d6da5dcbd389e1bc24
+2025-09-26 00:00:47 Skipped /Users/bobhegdal/dotfiles/.git/objects/04 -> /Users/bobhegdal/.git/objects/04. Reason: file already exists
+2025-09-26 00:00:47 Linked /Users/bobhegdal/dotfiles/.git/objects/04/tmp_obj_0sTTTd -> /Users/bobhegdal/.git/objects/04/tmp_obj_0sTTTd
+2025-09-26 00:00:47 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:03:33 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-26 00:03:33 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-26 00:03:37 Linked /Users/bobhegdal/dotfiles/.git/refs/remotes/dotfiles/HEAD.lock -> /Users/bobhegdal/.git/refs/remotes/dotfiles/HEAD.lock
+2025-09-26 00:03:37 Linked /Users/bobhegdal/dotfiles/.git/objects/maintenance.lock -> /Users/bobhegdal/.git/objects/maintenance.lock
+2025-09-26 00:03:39 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:03:40 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:03:41 Skipped /Users/bobhegdal/dotfiles/.git/objects/91/223b5fb70e42a3edd6c314a012eb3c96c8c1d1 -> /Users/bobhegdal/.git/objects/91/223b5fb70e42a3edd6c314a012eb3c96c8c1d1. Reason: file already exists
+2025-09-26 00:03:41 Linked /Users/bobhegdal/dotfiles/.git/objects/91/tmp_obj_iVkpvn -> /Users/bobhegdal/.git/objects/91/tmp_obj_iVkpvn
+2025-09-26 00:03:41 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:03:41 Skipped /Users/bobhegdal/dotfiles/.git/objects/22/0419a1c7eafa02a1dfa7ae84a195765af16089 -> /Users/bobhegdal/.git/objects/22/0419a1c7eafa02a1dfa7ae84a195765af16089. Reason: file already exists
+2025-09-26 00:03:41 Linked /Users/bobhegdal/dotfiles/.git/objects/22/tmp_obj_wm00Q0 -> /Users/bobhegdal/.git/objects/22/tmp_obj_wm00Q0
+2025-09-26 00:03:41 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:03:43 Linked /Users/bobhegdal/dotfiles/.git/objects/03/62f415eef08660832ad50b7f5d19d6e337d63b -> /Users/bobhegdal/.git/objects/03/62f415eef08660832ad50b7f5d19d6e337d63b
+2025-09-26 00:03:43 Linked /Users/bobhegdal/dotfiles/.git/objects/03/tmp_obj_VYGfPS -> /Users/bobhegdal/.git/objects/03/tmp_obj_VYGfPS
+2025-09-26 00:03:43 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:04:38 Linked /Users/bobhegdal/dotfiles/.git/refs/remotes/dotfiles/HEAD.lock -> /Users/bobhegdal/.git/refs/remotes/dotfiles/HEAD.lock
+2025-09-26 00:04:38 Linked /Users/bobhegdal/dotfiles/.git/objects/maintenance.lock -> /Users/bobhegdal/.git/objects/maintenance.lock
+2025-09-26 00:05:19 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
+2025-09-26 00:05:19 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-09-26 00:05:21 Linked /Users/bobhegdal/dotfiles/.git/refs/remotes/dotfiles/HEAD.lock -> /Users/bobhegdal/.git/refs/remotes/dotfiles/HEAD.lock
+2025-09-26 00:05:21 Linked /Users/bobhegdal/dotfiles/.git/objects/maintenance.lock -> /Users/bobhegdal/.git/objects/maintenance.lock
+2025-09-26 00:05:23 Linked /Users/bobhegdal/dotfiles/.git/objects/b3/7746b0751c3ea087e1680974db5ad0617cb1ea -> /Users/bobhegdal/.git/objects/b3/7746b0751c3ea087e1680974db5ad0617cb1ea
+2025-09-26 00:05:23 Skipped /Users/bobhegdal/dotfiles/.git/objects/b3 -> /Users/bobhegdal/.git/objects/b3. Reason: file already exists
+2025-09-26 00:05:23 Linked /Users/bobhegdal/dotfiles/.git/objects/b3/tmp_obj_inQZbl -> /Users/bobhegdal/.git/objects/b3/tmp_obj_inQZbl
+2025-09-26 00:05:23 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock
+2025-09-26 00:05:24 Linked /Users/bobhegdal/dotfiles/.git/objects/a5/08e6e196cda796e9cf6d7ea269e4afc569a676 -> /Users/bobhegdal/.git/objects/a5/08e6e196cda796e9cf6d7ea269e4afc569a676
+2025-09-26 00:05:24 Linked /Users/bobhegdal/dotfiles/.git/objects/a5/tmp_obj_8LdKGC -> /Users/bobhegdal/.git/objects/a5/tmp_obj_8LdKGC
+2025-09-26 00:05:24 Linked /Users/bobhegdal/dotfiles/.git/index.lock -> /Users/bobhegdal/.git/index.lock

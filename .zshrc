@@ -39,6 +39,10 @@ zstyle ':completion:*' menu select
 
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh --cmd cd)"
+
 alias ls='eza --icons=always --group-directories-first --git'
+
+#SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
+"$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" &
 
 fastfetch
