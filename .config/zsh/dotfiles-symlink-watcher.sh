@@ -43,6 +43,10 @@ watch_dotfiles() {
       continue
     fi
 
+    if [[ $filename == ".DS_STORE" ]]; then
+      continue
+    fi
+
     if [[ -d "$file" ]]; then
       mkdir -p "$target"
       continue
