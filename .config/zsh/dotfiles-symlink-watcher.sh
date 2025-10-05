@@ -43,7 +43,7 @@ watch_dotfiles() {
       continue
     fi
 
-    if [[ $filename == ".DS_STORE" ]]; then
+    if [[ $filename == ".DS_Store" ]]; then
       continue
     fi
 
