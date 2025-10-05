@@ -42,8 +42,11 @@ eval "$(zoxide init zsh --cmd cd)"
 
 alias ls='eza --icons=always --group-directories-first --git'
 
+source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
+
 #SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
-"$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" &
+
+pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" &
 
 
 fastfetch
