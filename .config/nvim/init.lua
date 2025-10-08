@@ -49,17 +49,8 @@ vim.opt.nrformats = ""
 vim.g.mapleader = ","
 vim.g.maplocalleader = "--"
 
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
-vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
-vim.keymap.set("i", "<leader>p", "<C-r>+")
-vim.keymap.set("n", "<leader><Left>", ":bnext<CR>")
-vim.keymap.set("n", "<leader><Down>", ":blast<CR>")
-vim.keymap.set("n", "<leader><Up>", ":bfirst<CR>")
-vim.keymap.set("n", "<leader><Right>", ":bprev<CR>")
-vim.keymap.set("n", "<leader>h", ":bprev<CR>")
-vim.keymap.set("n", "<leader>j", ":blast<CR>")
-vim.keymap.set("n", "<leader>k", ":bfirst<CR>")
-vim.keymap.set("n", "<leader>l", ":bprev<CR>")
+
+require("bernelius.remaps")
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
@@ -96,10 +87,4 @@ vim.diagnostic.config({
     },
   },
 })
-vim.keymap.set({ "n", "v" }, "<leader>dt", function()
-  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
-end)
-vim.keymap.set({ "n", "v" }, "<leader>df", vim.diagnostic.open_float)
 
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-vim.keymap.set("n", "<BS>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
