@@ -8,6 +8,7 @@ vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.termguicolors = true
+vim.opt.cursorline = true
 
 -- WSL clipboard support through win32yank
 if vim.fn.has("wsl") == 1 and vim.fn.executable("win32yank.exe") == 1 then
