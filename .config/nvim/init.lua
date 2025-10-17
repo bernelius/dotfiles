@@ -2,6 +2,7 @@ local tabsize = 2
 vim.opt.tabstop = tabsize * 4
 vim.opt.softtabstop = tabsize
 vim.opt.shiftwidth = tabsize
+vim.opt.smartindent = true
 -- tabs -> spaces
 vim.opt.expandtab = true
 vim.opt.number = true
