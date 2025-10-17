@@ -5,6 +5,7 @@ alias vim="nvim"
 nvims() {
     nvim "$(fzf --preview="bat --color=always {}")"
 }
+alias n="nvim ."
 export PS1='%n %3~ %# '
 case ":${PATH}:" in
     *:"$HOME/.local/bin":*)
