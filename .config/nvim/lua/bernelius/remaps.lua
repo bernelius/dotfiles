@@ -11,6 +11,8 @@ vim.keymap.set("n", "dd", '"_dd', { noremap = true, silent = true })
 -- x cuts to clipboard in visual mode, deletes into void otherwise
 vim.keymap.set("v", "x", '"+x', { noremap = true, silent = true })
 vim.keymap.set("n", "x", '"_x', { noremap = true, silent = true })
+-- big X yanks the while line super hard, removing it in the process
+vim.keymap.set("n", "X", '"+dd', { noremap = true, silent = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
 
