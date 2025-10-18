@@ -36,6 +36,7 @@ if [ -d "/mnt/c" ]; then
 fi
 
 export EDITOR="nvim"
+export MANPAGER="nvim +Man!"
 export XDG_CONFIG_HOME="$HOME/.config"
 
 #case-insensitive matching
