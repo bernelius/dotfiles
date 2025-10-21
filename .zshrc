@@ -19,9 +19,14 @@ source <(fzf --zsh)
 function v() {
   local tmp=$(mktemp)
   nvim -c "Oil" -c "autocmd VimLeave * lua vim.fn.writefile({require('oil').get_current_dir()}, '$tmp')"
-  cd "$(cat "$tmp")"
-  rm "$tmp"
+  local cwd="$(cat "$tmp")"
+  echo "$cwd"
+  if [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
 }
+
 #change directory in yazi if directory changed
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -31,6 +36,7 @@ function y() {
   fi
   rm -f -- "$tmp"
 }
+
 export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH"
 
 #WSL-specific
