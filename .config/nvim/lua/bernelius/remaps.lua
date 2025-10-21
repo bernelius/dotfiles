@@ -16,7 +16,6 @@ vim.keymap.set("n", "X", '"+dd', { noremap = true, silent = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
 
-vim.keymap.set("i", "<leader>p", "<C-r>+")
 vim.keymap.set("n", "<leader><Left>", ":bnext<CR>")
 vim.keymap.set("n", "<leader><Down>", ":blast<CR>")
 vim.keymap.set("n", "<leader><Up>", ":bfirst<CR>")
