@@ -16,4 +16,22 @@ check_broken_symlinks() {
   done
 }
 
+check_trash_files() {
+  trash_names=(
+    ".DS_Store"
+  )
+
+  current_dir=$(pwd)
+  for path in "$current_dir"/*(D) "$current_dir"/**/*(D); do
+    [[ -f $path ]] || continue
+    for name in $trash_names; do
+      if [[ ${path:t} == $name ]]; then
+        /bin/rm "$path"
+        echo "Deleted $path"
+      fi
+    done
+  done
+}
+
 check_broken_symlinks
+check_trash_files
