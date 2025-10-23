@@ -63,7 +63,7 @@ source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 
 SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
 
-pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >"$SYMLINK_LOGGER" 2>&1 &
+pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >>"$SYMLINK_LOGGER" 2>&1 &
 
 
 fastfetch
