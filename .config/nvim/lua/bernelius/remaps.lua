@@ -1,11 +1,10 @@
-
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 -- Use system clipboard for yanking
-vim.keymap.set({"n", "v"}, "y", '"+y', { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "y", '"+y', { noremap = true, silent = true })
 vim.keymap.set("n", "yy", '"+yy', { noremap = true, silent = true })
 
 -- Delete without affecting registers
-vim.keymap.set({"n", "v"}, "d", '"_d', { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "d", '"_d', { noremap = true, silent = true })
 vim.keymap.set("n", "dd", '"_dd', { noremap = true, silent = true })
 
 -- x cuts to clipboard in visual mode, deletes into void otherwise
@@ -26,9 +25,13 @@ vim.keymap.set("n", "<leader>k", ":bfirst<CR>")
 vim.keymap.set("n", "<leader>l", ":bprev<CR>")
 
 vim.keymap.set({ "n", "v" }, "<leader>dt", function()
-  vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end)
 vim.keymap.set({ "n", "v" }, "<leader>df", vim.diagnostic.open_float)
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<BS>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+vim.keymap.set({ "n", "c" }, "<leader>ca", vim.lsp.buf.code_action, {})

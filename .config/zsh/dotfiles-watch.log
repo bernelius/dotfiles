@@ -192,3 +192,5 @@
 2025-09-26 10:00:30 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
 2025-09-26 10:09:03 Linked /Users/bobhegdal/dotfiles/.config/zsh/4913 -> /Users/bobhegdal/.config/zsh/4913
 2025-09-26 10:09:03 Skipped /Users/bobhegdal/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh -> /Users/bobhegdal/.config/zsh/dotfiles-symlink-watcher.sh. Reason: file already exists
+2025-10-24 13:01:43 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/conform.lua -> /home/bernelius/.config/nvim/lua/plugins/conform.lua
+2025-10-24 14:05:15 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/nvim-lint.lua -> /home/bernelius/.config/nvim/lua/plugins/nvim-lint.lua
