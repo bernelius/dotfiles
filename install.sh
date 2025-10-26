@@ -19,7 +19,7 @@ link_dotfile() {
     filename=$(basename "$source_path")
 
 
-    if [[ "$filename" == "." || "$filename" == ".." || "$filename" == ".git" || "$filename" == "install.sh" || "$filename" == "cleanup.sh" ]]; then
+    if [[ "$filename" == "." || "$filename" == ".." || "$filename" == ".git" || "$filename" == "install.sh" || "$filename" == "cleanup.sh" || "$filename" == "make-brewfile.sh" ]]; then
         return
     fi
 

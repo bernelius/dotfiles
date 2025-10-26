@@ -15,6 +15,7 @@ skip_files=(
   "$DOTFILES_DIR/README.md"
   "$DOTFILES_DIR/.gitignore"
   "$DOTFILES_DIR/install.sh"
+  "$DOTFILES_DIR/make-brewfile.sh"
   "$DOTFILES_DIR/cleanup.sh"
   "$DOTFILES_DIR/.git"
 )
