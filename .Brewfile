@@ -1,16 +1,21 @@
 tap "jesseduffield/lazygit"
 tap "kegworks-app/kegworks"
 tap "koekeishiya/formulae"
+tap "nikitabobko/tap"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cross-platform make
 brew "cmake"
+# Modern, maintained replacement for ls
+brew "eza"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Monitor a directory for changes and run a shell command
+brew "fswatch"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -37,8 +42,12 @@ brew "neovim"
 brew "node"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Draw UML diagrams
+brew "plantuml"
 # Object-relational database system
 brew "postgresql@14", restart_service: :changed
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -47,6 +56,8 @@ brew "rust"
 brew "rustup"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
+# Terminal based presentation tool
+brew "slides"
 # Data wrangler with jq-like query language
 brew "sq"
 # Terminal multiplexer
@@ -57,6 +68,8 @@ brew "wget"
 brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 cask "font-symbols-only-nerd-font"

@@ -48,6 +48,7 @@ fi
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export XDG_CONFIG_HOME="$HOME/.config"
+export HOMEBREW_BUNDLE_FILE="~/dotfiles/.Brewfile"
 
 #case-insensitive matching
 autoload -Uz compinit && compinit
