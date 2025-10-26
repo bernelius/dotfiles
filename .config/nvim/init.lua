@@ -55,6 +55,7 @@ require("bernelius.remaps")
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
+require("lsp")
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     callback = function()
