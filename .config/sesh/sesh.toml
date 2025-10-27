@@ -1,0 +1,4 @@
+[[session]]
+name = "config"
+path = "~/dotfiles/.config"
+starup_command = "n"

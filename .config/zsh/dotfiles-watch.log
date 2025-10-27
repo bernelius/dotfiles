@@ -195,3 +195,43 @@
 2025-10-24 13:01:43 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/conform.lua -> /home/bernelius/.config/nvim/lua/plugins/conform.lua
 2025-10-24 14:05:15 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/nvim-lint.lua -> /home/bernelius/.config/nvim/lua/plugins/nvim-lint.lua
 2025-10-24 14:38:43 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/markview.lua -> /home/bernelius/.config/nvim/lua/plugins/markview.lua
+2025-10-27 22:25:20 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/config.lock -> /home/bernelius/.tmux/plugins/tpm/.git/config.lock
+ln: failed to create symbolic link '/home/bernelius/.tmux/plugins/tpm/.git/config.lock': File exists
+2025-10-27 22:25:20 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/config.lock -> /home/bernelius/.tmux/plugins/tpm/.git/config.lock
+ln: failed to create symbolic link '/home/bernelius/.tmux/plugins/tpm/.git/config.lock': File exists
+2025-10-27 22:25:20 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/config.lock -> /home/bernelius/.tmux/plugins/tpm/.git/config.lock
+ln: failed to create symbolic link '/home/bernelius/.tmux/plugins/tpm/.git/config.lock': File exists
+2025-10-27 22:25:20 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/config.lock -> /home/bernelius/.tmux/plugins/tpm/.git/config.lock
+2025-10-27 22:25:21 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/objects/pack/tmp_pack_WJo5Vd -> /home/bernelius/.tmux/plugins/tpm/.git/objects/pack/tmp_pack_WJo5Vd
+2025-10-27 22:25:21 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/objects/pack/tmp_idx_PX9Bkx -> /home/bernelius/.tmux/plugins/tpm/.git/objects/pack/tmp_idx_PX9Bkx
+2025-10-27 22:25:21 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/objects/pack/tmp_rev_qceXii -> /home/bernelius/.tmux/plugins/tpm/.git/objects/pack/tmp_rev_qceXii
+2025-10-27 22:25:21 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.keep -> /home/bernelius/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.keep
+2025-10-27 22:25:22 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.pack -> /home/bernelius/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.pack
+2025-10-27 22:25:22 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.rev -> /home/bernelius/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.rev
+2025-10-27 22:25:22 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.idx -> /home/bernelius/.tmux/plugins/tpm/.git/objects/pack/pack-1f8e91c4b0c2fd3de85deb1de59db344d5af0319.idx
+2025-10-27 22:25:22 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/packed-refs.lock -> /home/bernelius/.tmux/plugins/tpm/.git/packed-refs.lock
+2025-10-27 22:25:22 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/packed-refs.new -> /home/bernelius/.tmux/plugins/tpm/.git/packed-refs.new
+2025-10-27 22:25:23 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/HEAD.lock -> /home/bernelius/.tmux/plugins/tpm/.git/HEAD.lock
+ln: failed to create symbolic link '/home/bernelius/.tmux/plugins/tpm/.git/HEAD.lock': File exists
+2025-10-27 22:25:23 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/HEAD.lock -> /home/bernelius/.tmux/plugins/tpm/.git/HEAD.lock
+ln: failed to create symbolic link '/home/bernelius/.tmux/plugins/tpm/.git/config.lock': File exists
+2025-10-27 22:25:23 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/config.lock -> /home/bernelius/.tmux/plugins/tpm/.git/config.lock
+ln: failed to create symbolic link '/home/bernelius/.tmux/plugins/tpm/.git/config.lock': File exists
+2025-10-27 22:25:23 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/config.lock -> /home/bernelius/.tmux/plugins/tpm/.git/config.lock
+ln: failed to create symbolic link '/home/bernelius/.tmux/plugins/tpm/.git/config.lock': File exists
+2025-10-27 22:25:23 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/config.lock -> /home/bernelius/.tmux/plugins/tpm/.git/config.lock
+2025-10-27 22:25:24 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.git/index.lock -> /home/bernelius/.tmux/plugins/tpm/.git/index.lock
+2025-10-27 22:25:24 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.gitattributes -> /home/bernelius/.tmux/plugins/tpm/.gitattributes
+2025-10-27 22:25:24 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.gitignore -> /home/bernelius/.tmux/plugins/tpm/.gitignore
+2025-10-27 22:25:24 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.gitmodules -> /home/bernelius/.tmux/plugins/tpm/.gitmodules
+2025-10-27 22:25:24 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/.travis.yml -> /home/bernelius/.tmux/plugins/tpm/.travis.yml
+2025-10-27 22:25:25 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/CHANGELOG.md -> /home/bernelius/.tmux/plugins/tpm/CHANGELOG.md
+2025-10-27 22:25:25 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/HOW_TO_PLUGIN.md -> /home/bernelius/.tmux/plugins/tpm/HOW_TO_PLUGIN.md
+2025-10-27 22:25:25 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/LICENSE.md -> /home/bernelius/.tmux/plugins/tpm/LICENSE.md
+2025-10-27 22:25:25 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/README.md -> /home/bernelius/.tmux/plugins/tpm/README.md
+2025-10-27 22:25:25 Linked /home/bernelius/dotfiles/.tmux/plugins/tpm/tpm -> /home/bernelius/.tmux/plugins/tpm/tpm
+ln: failed to create symbolic link '/home/bernelius/.config/nvim/lua/plugins/catppuccin.lua': File exists
+2025-10-27 22:33:30 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/catppuccin.lua -> /home/bernelius/.config/nvim/lua/plugins/catppuccin.lua
+2025-10-27 22:33:35 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/colorschemes/yorumi.lua -> /home/bernelius/.config/nvim/lua/plugins/colorschemes/yorumi.lua
+2025-10-27 22:34:11 Linked /home/bernelius/dotfiles/.config/nvim/lua/plugins/colorschemes/catppuccin.lua -> /home/bernelius/.config/nvim/lua/plugins/colorschemes/catppuccin.lua
+2025-10-27 23:07:25 Linked /home/bernelius/dotfiles/.config/sesh/sesh.toml -> /home/bernelius/.config/sesh/sesh.toml
