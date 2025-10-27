@@ -32,6 +32,8 @@ brew "json-glib"
 brew "just"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
 # Sudoless performance monitoring for Apple Silicon processors
 brew "macmon"
 # Java-based project management
@@ -46,8 +48,6 @@ brew "pkgconf"
 brew "plantuml"
 # Object-relational database system
 brew "postgresql@14", restart_service: :changed
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.14"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language

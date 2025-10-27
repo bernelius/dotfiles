@@ -55,7 +55,12 @@ return {
                     -- We are going to use lualine_c an lualine_x as left and
                     -- right section. Both are highlighted by c theme .  So we
                     -- are just setting default looks o statusline
-                    normal = { c = { fg = colors.fg, bg = colors.bg } },
+                    normal = {
+                        c = {
+                            fg = colors.fg,
+                            bg = colors.bg,
+                        },
+                    },
                     inactive = { c = { fg = colors.fg, bg = colors.bg } },
                 },
             },
@@ -141,7 +146,8 @@ return {
         ins_left({
             "filename",
             cond = conditions.buffer_not_empty,
-            path = 1,
+            file_status = true,
+            path = 4,
             color = { fg = colors.magenta, gui = "bold" },
         })
 
@@ -172,10 +178,10 @@ return {
             color = { fg = colors.red, gui = "bold" },
         })
 
-        ins_left({
+        ins_right({
             -- Lsp server name .
             function()
-                local msg = "No Active Lsp"
+                local msg = "None"
                 local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
                 local clients = vim.lsp.get_clients()
                 if next(clients) == nil then

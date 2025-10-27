@@ -3,6 +3,7 @@ alias osbook='open "/Users/bobhegdal/Documents/OS/Andrew Tanenbaum, Herbert Bos 
 alias docs='cd ~/Documents/'
 alias vim="v"
 alias n="v ."
+alias novim="nvim -u NONE"
 export PS1='%n %3~ %# '
 case ":${PATH}:" in
   *:"$HOME/.local/bin":*)
@@ -58,7 +59,11 @@ zstyle ':completion:*' menu select
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh --cmd cd)"
 
-alias ls='eza --icons=always --group-directories-first --git'
+alias ls='eza --icons=always --group-directories-first --git --color=auto'
+alias l='ls'
+alias la='eza --icons=always --group-directories-first --git --color=auto --all'
+alias lt='eza --icons=always --group-directories-first --git --color=auto --tree'
+alias ll='eza --icons=always --group-directories-first --git --color=auto -l'
 
 source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 
