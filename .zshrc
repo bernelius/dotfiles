@@ -26,7 +26,6 @@ function sesh-sessions() {
     sesh connect $session
   }
 }
-alias s='sesh-sessions'
 
 source <(fzf --zsh)
 #change directory if exiting nvim in oil
@@ -50,6 +49,8 @@ function y() {
   fi
   rm -f -- "$tmp"
 }
+
+stty -ixon # disable ctrl-s outside of tmux
 
 export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH"
 
@@ -78,11 +79,17 @@ alias la='eza --icons=always --group-directories-first --git --color=auto --all'
 alias lt='eza --icons=always --group-directories-first --git --color=auto --tree'
 alias ll='eza --icons=always --group-directories-first --git --color=auto -l'
 
+alias ff='fzf --preview "bat --color=always {}"'
+
 source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 
 SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
 
 pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >>"$SYMLINK_LOGGER" 2>&1 &
 
-
-fastfetch
+if [ -z "$TMUX" ]; then
+  fastfetch
+  alias s='sesh-sessions'
+else
+  alias s=$'echo "\nDon\'t tmux your tmux.\n"'
+fi

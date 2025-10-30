@@ -1,9 +1,20 @@
 [[session]]
 name = "config"
 path = "~/dotfiles/.config"
-startup_command = "ls"
+startup_command = "clear && figlet -f big 'dotfiles' | lolcat && ls"
+windows = [ "git" ]
 
 [[session]]
 name = "zmk workspace"
 path = "~/code/zmk-workspace"
-startup_command = "ls"
+startup_command = "clear && figlet -f big 'zmk workspace' | lolcat && ls"
+windows = [ "git" ]
+
+[[window]]
+name = "git"
+startup_script = "lazygit"
+
+[[session]]
+name = "vekstbarometer"
+path = "~/code/vekstbarometer"
+startup_command = "clear && figlet -f big 'vekstbarometer' | lolcat"
