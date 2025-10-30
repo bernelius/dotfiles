@@ -11,14 +11,13 @@ return {
                 typescript = { "prettierd" },
                 json = { "prettierd" },
                 yaml = { "prettierd" },
-                python = { "ruff" },
                 htmldjango = { "djlint" },
                 djangohtml = { "djlint" },
                 lua = { "stylua" },
             },
             format_on_save = {
                 timeout_ms = 500,
-                lsp_format = "never",
+                lsp_format = "fallback",
             },
         })
         require("conform").formatters = {

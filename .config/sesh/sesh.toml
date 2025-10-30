@@ -1,4 +1,9 @@
 [[session]]
 name = "config"
 path = "~/dotfiles/.config"
-starup_command = "ls"
+startup_command = "ls"
+
+[[session]]
+name = "zmk workspace"
+path = "~/code/zmk-workspace"
+startup_command = "ls"
