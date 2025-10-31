@@ -2,16 +2,16 @@
 name = "config"
 path = "~/dotfiles/.config"
 startup_command = "clear && figlet -f big 'dotfiles' | lolcat && ls"
-windows = [ "git" ]
+windows = [ "lazygit" ]
 
 [[session]]
 name = "zmk workspace"
 path = "~/code/zmk-workspace"
 startup_command = "clear && figlet -f big 'zmk workspace' | lolcat && ls"
-windows = [ "git" ]
+windows = [ "lazygit" ]
 
 [[window]]
-name = "git"
+name = "lazygit"
 startup_script = "lazygit"
 
 [[session]]
