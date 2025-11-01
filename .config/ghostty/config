@@ -75,7 +75,7 @@ font-family-bold-italic = JetBrainsMono Bold Italic
 # italic_font      UbuntuMono Nerd Font Mono Italic
 # bold_italic_font UbuntuMono Nerd Font Mono Bold Italic
 
-font-size = 13
+font-size = 15
 gtk-titlebar = false
 
 

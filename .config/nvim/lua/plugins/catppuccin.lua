@@ -8,8 +8,8 @@ return {
             --flavour = "latte",
             color_overrides = {
                 mocha = {
-                    base = "#0f0f0f",
-                    mantle = "#000000",
+                    base = "#121212",
+                    mantle = "#121212",
                     crust = "#000000",
                 },
                 latte = {
