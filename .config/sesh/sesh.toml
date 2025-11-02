@@ -1,3 +1,7 @@
+[[window]]
+name = "lazygit"
+startup_script = "lazygit"
+
 [[session]]
 name = "config"
 path = "~/dotfiles/.config"
@@ -10,11 +14,7 @@ path = "~/code/zmk-workspace"
 startup_command = "clear && figlet -f big 'zmk workspace' | lolcat && ls"
 windows = [ "lazygit" ]
 
-[[window]]
-name = "lazygit"
-startup_script = "lazygit"
-
 [[session]]
 name = "vekstbarometer"
 path = "~/code/vekstbarometer"
-startup_command = "clear && figlet -f big 'vekstbarometer' | lolcat"
+startup_command = "clear && figlet -c -w 100 -f big 'VekstbarometerUSN' | lolcat"
