@@ -16,5 +16,6 @@ windows = [ "lazygit" ]
 
 [[session]]
 name = "vekstbarometer"
-path = "~/code/vekstbarometer"
+path = "~/code/vekstbarometer/vekstbaro-slides"
 startup_command = "clear && figlet -c -w 100 -f big 'VekstbarometerUSN' | lolcat"
+windows = [ "lazygit" ]
