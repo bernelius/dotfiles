@@ -4,6 +4,7 @@ alias docs='cd ~/Documents/'
 alias vim="v"
 alias n="v ."
 alias novim="nvim -u NONE"
+alias ..="cd .."
 export PS1='%n %3~ %# '
 case ":${PATH}:" in
   *:"$HOME/.local/bin":*)
@@ -72,6 +73,11 @@ zstyle ':completion:*' menu select
 
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh --cmd cd)"
+
+# this integrates with .config/sesh/sesh.toml
+export ROOT=""
+alias root='cd $ROOT'
+
 
 alias ls='eza --icons=always --group-directories-first --git --color=auto'
 alias l='ls'
