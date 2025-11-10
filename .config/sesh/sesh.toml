@@ -5,18 +5,18 @@ startup_script = "lazygit"
 [[session]]
 name = "dotfiles"
 path = "~/dotfiles/.config"
-startup_command = "ROOT=~/dotfiles/.config && cd $ROOT && clear && figlet -w 100 -f big 'dotfiles' | lolcat"
+startup_command = "ROOT=~/dotfiles/.config && clear && figlet -w 100 -f big 'dotfiles' | lolcat"
 windows = ["lazygit"]
 
 [[session]]
 name = "zmk workspace"
 path = "~/code/zmk-workspace"
-startup_command = "ROOT=~/code/zmk-workspace && cd $ROOT && clear && figlet -w 100 -f big 'zmk workspace' | lolcat"
+startup_command = "ROOT=~/code/zmk-workspace && clear && figlet -w 100 -f big 'zmk workspace' | lolcat"
 windows = ["lazygit"]
 
 [[session]]
 name = "VekstbarometerUSN"
 path = "~/code/vekstbarometer/vekstbaro-oop"
-startup_command = "ROOT=~/code/vekstbarometer/vekstbaro-oop && cd $ROOT && clear && figlet -w 100 -f big 'VekstbarometerUSN' | lolcat"
+startup_command = "ROOT=~/code/vekstbarometer/vekstbaro-oop && clear && figlet -w 100 -f big 'VekstbarometerUSN' | lolcat"
 windows = ["lazygit"]
 

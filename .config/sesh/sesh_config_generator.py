@@ -10,7 +10,7 @@ class Session:
         self.startup_command = (
             startup_command
             if startup_command
-            else f"ROOT={self.root} && cd $ROOT && clear && figlet -w 100 -f big '{self.name}' | lolcat"
+            else f"ROOT={self.root} && clear && figlet -w 100 -f big '{self.name}' | lolcat"
         )
         self.windows = windows if windows else ["lazygit"]
 
