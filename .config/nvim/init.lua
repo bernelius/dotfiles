@@ -67,6 +67,7 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 vim.cmd("colorscheme catppuccin")
 --vim.cmd("colorscheme yorumi")
 
+vim.opt.winborder = "rounded"
 vim.diagnostic.config({
     float = {
         border = "rounded",
