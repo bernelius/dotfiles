@@ -6,6 +6,7 @@ alias n="v ."
 alias novim="nvim -u NONE"
 alias ..="cd .."
 export PS1='%n %3~ %# '
+
 case ":${PATH}:" in
   *:"$HOME/.local/bin":*)
     ;;
@@ -92,6 +93,10 @@ source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
 
 pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >>"$SYMLINK_LOGGER" 2>&1 &
+if [ -d "$HOME/.secrets" ]; then
+  source "$HOME/.secrets/api-keys.sh"
+fi
+
 
 if [ -z "$TMUX" ]; then
   fastfetch
