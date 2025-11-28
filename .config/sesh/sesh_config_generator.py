@@ -35,7 +35,7 @@ Window("lazygit", "lazygit")
 
 Session("dotfiles", "~/dotfiles/.config")
 Session("zmk workspace", "~/code/zmk-workspace")
-Session("VekstbarometerUSN", "~/code/vekstbarometer/vekstbaro-oop")
+Session("VekstbarometerUSN", "~/code/vekstbarometer/indicator-updater")
 
 
 with open("sesh.toml", "w") as f:

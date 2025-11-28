@@ -16,7 +16,7 @@ windows = ["lazygit"]
 
 [[session]]
 name = "VekstbarometerUSN"
-path = "~/code/vekstbarometer/vekstbaro-oop"
-startup_command = "ROOT=~/code/vekstbarometer/vekstbaro-oop && clear && figlet -w 100 -f big 'VekstbarometerUSN' | lolcat"
+path = "~/code/vekstbarometer/indicator-updater"
+startup_command = "ROOT=~/code/vekstbarometer/indicator-updater && clear && figlet -w 100 -f big 'VekstbarometerUSN' | lolcat"
 windows = ["lazygit"]
 
