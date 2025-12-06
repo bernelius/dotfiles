@@ -11,6 +11,9 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.splitright = true
 vim.opt.undofile = true
+-- case insensitive searching
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- WSL clipboard support through win32yank
 if vim.fn.has("wsl") == 1 and vim.fn.executable("win32yank.exe") == 1 then
