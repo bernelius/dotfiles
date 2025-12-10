@@ -62,9 +62,6 @@ theme = catppuccin-mocha.conf
 #font-family = CaskaydiaCove NFM Regular
 
 font-family = JetBrainsMono Nerd Font Mono
-font-family-bold = JetBrainsMono NFM Bold
-font-family-italic = JetBrainsMono NFM Italic
-font-family-bold-italic = JetBrainsMono Bold Italic
 #
 # font_family      CaskaydiaCovePL Nerd Font SemiLight
 # bold_font        CaskaydiaCovePL Nerd Font SemiBold
@@ -75,7 +72,7 @@ font-family-bold-italic = JetBrainsMono Bold Italic
 # italic_font      UbuntuMono Nerd Font Mono Italic
 # bold_italic_font UbuntuMono Nerd Font Mono Bold Italic
 
-font-size = 15
+font-size = 12
 gtk-titlebar = false
 
 
