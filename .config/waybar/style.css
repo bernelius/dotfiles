@@ -1,8 +1,4 @@
-
-
 @import url("catppuccin-mocha.css");
-
-
 
 /*
 $subtext1 = rgb(bac2de)
@@ -40,167 +36,176 @@ $crust = rgb(11111b)
 $crustAlpha = 11111b
 */
 
-
 * {
-    font-size:16px;
-    font-family: "JetBrainsMonoNL Nerd Font Propo";
+  font-size: 16px;
+  font-family: "JetBrainsMonoNL Nerd Font Propo";
 }
 
 window#waybar {
-    all:unset;
+  all: unset;
 }
 
 .modules-left {
-    padding:7px;
-    margin:10px 0px 5px 10px;
-    border-radius:0px;
-    background: alpha(@background,0);
+  padding: 7px;
+  margin: 10px 0px 5px 10px;
+  border-radius: 0px;
+  background: alpha(@background, 0);
 }
 
 .modules-center {
-    padding:7px;
-    margin:10px 0px 5px 0px;
-    border-radius:0px;
-    background: alpha(@background,.9);
+  padding: 7px;
+  margin: 10px 0px 5px 0px;
+  border-radius: 0px;
+  background: alpha(@background, 0.9);
 }
 
 .modules-right {
-    padding:7px;
-    margin: 10px 10px 5px 0px;
-    border-radius:0px;
-    background: alpha(@background,0);
+  padding: 7px;
+  margin: 10px 10px 5px 0px;
+  border-radius: 0px;
+  background: alpha(@background, 0);
 }
 
 tooltip {
-    background: @background;
-    color: @text;
+  background: @background;
+  color: @text;
 }
 
-#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
-    transition: all .1s ease;
-    color:@red;
+#clock:hover,
+#custom-pacman:hover,
+#custom-notification:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover {
+  transition: all 0.1s ease;
+  color: @red;
 }
 
 #custom-notification {
-    padding: 0px 5px;
-    transition: all .1s ease;
-    color:@text;
+  padding: 0px 5px;
+  transition: all 0.1s ease;
+  color: @text;
 }
 
-#clock{
-    padding: 0px 5px;
-    color:@text;
-    transition: all .1s ease;
+#clock {
+  padding: 0px 5px;
+  color: @text;
+  transition: all 0.1s ease;
 }
 
 #workspaces {
-    padding: 0px 5px;
+  padding: 0px 5px;
 }
 
 #workspaces button {
-    all:unset;
-    padding: 0px 5px;
-    color: alpha(@text,.9);
+  all: unset;
+  padding: 0px 5px;
+  color: alpha(@text, 0.9);
 }
 
 #workspaces button:hover {
-    color: @red;
-    border: none;
-    transition: all .1s ease;
+  color: @red;
+  border: none;
+  transition: all 0.1s ease;
 }
 
 #workspaces button.active {
-    color: alpha(@red, .7);
-    border: none;
+  color: alpha(@red, 0.7);
+  border: none;
 }
 
 #workspaces button.empty {
-    color: alpha(@text, .3);
-    border: none;
+  color: alpha(@text, 0.3);
+  border: none;
 }
 
 #workspaces button.empty:hover {
-    color: alpha(@red, .7);
-    border: none;
-    transition: all .1s ease;
+  color: alpha(@red, 0.7);
+  border: none;
+  transition: all 0.1s ease;
 }
 
 #workspaces button.empty.active {
-    color: @red;
-    border: none;
+  color: alpha(@red, 0.7);
+  border: none;
 }
 
-#bluetooth{
-    padding: 0px 5px;
-    transition: all .1s ease;
-    color:@text;
+#bluetooth {
+  padding: 0px 5px;
+  transition: all 0.1s ease;
+  color: @text;
 }
 
-#network{
-    padding: 0px 5px;
-    transition: all .1s ease;
-    color:@text;
+#network {
+  padding: 0px 5px;
+  transition: all 0.1s ease;
+  color: @text;
 }
 
-#battery{
-    padding: 0px 5px;
-    transition: all .1s ease;
-    color:@text;
+#battery {
+  padding: 0px 5px;
+  transition: all 0.1s ease;
+  color: @text;
 }
 
 #battery.charging {
-    color: @green;
+  color: @green;
 }
 
 #battery.warning:not(.charging) {
-    color: @yellow;
+  color: @yellow;
 }
 
 #battery.critical:not(.charging) {
-    color: @red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: @red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-#group-expand{
-    padding: 0px 10px;
-    transition: all .1s ease; 
+#group-expand {
+  padding: 0px 10px;
+  transition: all 0.1s ease;
 }
 
-#custom-expand{
-    padding: 0px 5px;
-    color:alpha(@foreground,.2);
-    transition: all .1s ease; 
+#custom-expand {
+  padding: 0px 5px;
+  color: alpha(@foreground, 0.2);
+  transition: all 0.1s ease;
 }
 
-#custom-expand:hover{
-    color: @red;
+#custom-expand:hover {
+  color: @red;
 }
 
-#cpu,#memory,#temperature {
-    padding: 0px 5px;
-    transition: all .1s ease; 
-    color:@text;
+#cpu,
+#memory,
+#temperature {
+  padding: 0px 5px;
+  transition: all 0.1s ease;
+  color: @text;
 }
 
 #custom-endpoint {
-    color:alpha(@text, .6);
+  color: alpha(@text, 0.6);
 }
 
 #tray {
-    padding: 0px 5px;
-    transition: all .1s ease; 
+  padding: 0px 5px;
+  transition: all 0.1s ease;
 }
 
 #tray menu * {
-    padding: 0px 5px;
-    transition: all .1s ease; 
+  padding: 0px 5px;
+  transition: all 0.1s ease;
 }
 
 #tray menu separator {
-    padding: 0px 5px;
-    transition: all .1s ease; 
+  padding: 0px 5px;
+  transition: all 0.1s ease;
 }
