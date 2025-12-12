@@ -1,21 +1,43 @@
 font=JetBrainsMonoNL Nerd Font Mono (monospace)
-background-color=#000000
+background-color=#121212
 width=350
 height=200
-border-color=#f38ba8
-progress-color=#f38ba8
+border-color=#cdd6f4
+progress-color=#a6e3a1
+text-color=#cdd6f4
 default-timeout=5000
 anchor=top-right
 
 
 [urgency=low]
-border-color=#a6e3a1
+border-color=#cdd6f4
 progress-color=#a6e3a1
 
 [urgency=normal]
-border-color=#f9e2af
-progress-color=#f9e2af
+border-color=#fab387
+progress-color=#fab387
 
 [urgency=high]
 border-color=#f38ba8
 progress-color=#f38ba8
+
+
+
+#background #1e1e2e;
+#foreground #cdd6f4;
+#cursor #dfdecf;
+#rosewater #f5e0dc;
+#flamingo #f2cdcd;
+#pink #f5c2e7;
+#mauve #cba6f7;
+#red #f38ba8;
+#maroon #eba0ac;
+#peach #fab387;
+#yellow #f9e2af;
+#green #A6E3A1;
+#teal #94e2d5;
+#sky #89dceb;
+#sapphire #74c7ec;
+#blue #89b4fa;
+#lavender #b4befe;
+#text #cdd6f4;
