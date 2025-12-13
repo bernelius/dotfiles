@@ -6,6 +6,7 @@ alias n="v ."
 alias novim="nvim -u NONE"
 alias ..="cd .."
 export PS1='%n %3~ %# '
+alias packy='sudo pacman -Syu'
 
 alias avante='nvim -c "lua vim.defer_fn(function()require(\"avante.api\").zen_mode()end, 100)"'
 case ":${PATH}:" in
