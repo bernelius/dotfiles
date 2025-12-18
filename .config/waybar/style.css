@@ -47,23 +47,23 @@ window#waybar {
 
 .modules-left {
   padding: 7px;
-  margin: 10px 0px 5px 10px;
-  border-radius: 0px;
-  background: alpha(@background, 0);
+  margin: 5px 0px 0px 5px;
+  border-radius: 2px;
+  background: alpha(@background, 0.5);
 }
 
 .modules-center {
   padding: 7px;
-  margin: 10px 0px 5px 0px;
-  border-radius: 0px;
+  margin: 5px 0px 0px 5px;
+  border-radius: 2px;
   background: alpha(@background, 0.9);
 }
 
 .modules-right {
   padding: 7px;
-  margin: 10px 10px 5px 0px;
-  border-radius: 0px;
-  background: alpha(@background, 0);
+  margin: 5px 0px 0px 5px;
+  border-radius: 2px;
+  background: alpha(@background, 0.5);
 }
 
 tooltip {

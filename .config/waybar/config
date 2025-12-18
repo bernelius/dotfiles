@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","clock"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","bluetooth","network","battery"],
+        "modules-right": ["group/expand","cpu","bluetooth","network","battery"],
 
 
         "hyprland/workspaces": {
@@ -23,17 +23,18 @@
         },
         "custom/notification": {
             "tooltip": false,
-            "format": "",
-            "on-click": "mako restore",
+            "format": "",
+            "on-click": "makoctl restore",
+            "on-click-right": "makoctl dismiss --all",
             "escape": true
         },
         "clock": {
-            "format": "{:%I:%M:%S}",
+            "format": "{:%d %b %H:%M:%S}",
             "interval": 1,   
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
                 "format": {
-                    "today": "<span color='#fAfBfC'><b>{}</b></span>"
+                    "today": "<span color='#f38ba8'><b>{}</b></span>"
                 }
             },
             "actions": {
@@ -63,24 +64,30 @@
             "on-click-right": "ghostty -e 'bluetui'",
         }, 
         "battery": {
+            "tooltip": true,
             "interval":30,
             "states": {
                 "good": 95,
                 "warning": 30,
                 "critical": 20
             },
-            "format": "{capacity}% {icon}",
-            "format-charging": "{capacity}% 󰂄",
-            "format-plugged": "{capacity}% 󰂄 ",
+            "tooltip-format": "{capacity}%",
+            "format": "{icon}",
+            "format-charging": "󰂄",
+            "format-plugged": "󰂄 ",
             "format-alt": "{time} {icon}",
             "format-icons": [
                 "󰁻",
-            "󰁼",
-            "󰁾",
-            "󰂀",
-            "󰂂",
-            "󰁹"
+                "󰁼",
+                "󰁾",
+                "󰂀",
+                "󰂂",
+                "󰁹"
             ],
+        },
+        "cpu": {
+            "format": "{usage}% ", 
+            "tooltip": true
         },
         "custom/expand": {
             "format": "",
@@ -97,11 +104,7 @@
                 "transition-to-left": true,
                 "click-to-reveal": true
             },
-            "modules": ["custom/expand","cpu","memory","temperature","tray","custom/endpoint"],
-        },
-        "cpu": {
-            "format": "󰻠",
-            "tooltip": true
+            "modules": ["custom/expand","memory","temperature","tray","custom/endpoint"],
         },
         "memory": {
             "format": ""
@@ -116,3 +119,4 @@
         },
 } 
 
+// vim: set ft=json5

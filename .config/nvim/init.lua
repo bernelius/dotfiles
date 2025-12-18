@@ -15,6 +15,7 @@ vim.opt.undofile = true
 -- case insensitive searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.swapfile = false
 
 -- WSL clipboard support through win32yank
 if vim.fn.has("wsl") == 1 and vim.fn.executable("win32yank.exe") == 1 then
@@ -62,6 +63,14 @@ require("bernelius.remaps")
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
 require("lsp")
+
+vim.filetype.add({
+    pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})
+
+vim.filetype.add({
+    pattern = { [".*/.config/.*config"] = "json5" },
+})
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     callback = function()
