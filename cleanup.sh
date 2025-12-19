@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 check_broken_symlinks() {
   for path in "$HOME"/* "$HOME/.config"/**/*; do

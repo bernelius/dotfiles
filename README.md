@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal dotfiles for macOS/linux
+Personal dotfiles for linux
 Installing the dotfiles is not recommended.
 The installation script also creates a watcher script that will automatically create symlinks to the dotfiles when they are changed.
 Use at your own risk.

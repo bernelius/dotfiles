@@ -1,6 +1,3 @@
-alias javabook='open "/Users/bobhegdal/Documents/Books/Introduction to Java Programming and Data Structures - Daniel Y. Liang.pdf"'
-alias osbook='open "/Users/bobhegdal/Documents/OS/Andrew Tanenbaum, Herbert Bos - Modern Operating Systems, 5th Global Edition-Pearson (2024).pdf"'
-alias docs='cd ~/Documents/'
 alias vim="v"
 alias n="v ."
 alias novim="nvim -u NONE"
@@ -56,7 +53,7 @@ function y() {
 
 stty -ixon # disable ctrl-s outside of tmux
 
-export PATH="/opt/homebrew/opt/rustup/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 #WSL-specific
 if [ -d "/mnt/c" ]; then
@@ -67,7 +64,6 @@ fi
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export XDG_CONFIG_HOME="$HOME/.config"
-export HOMEBREW_BUNDLE_FILE="~/dotfiles/.Brewfile"
 
 #case-insensitive matching
 autoload -Uz compinit && compinit
@@ -92,9 +88,9 @@ alias ff='fzf --preview "bat --color=always {}"'
 
 source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 
-SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
+# SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
 
-pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >>"$SYMLINK_LOGGER" 2>&1 &
+# pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >>"$SYMLINK_LOGGER" 2>&1 &
 if [ -d "$HOME/.secrets" ]; then
   source "$HOME/.secrets/api-keys.sh"
 fi
