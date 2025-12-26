@@ -14,6 +14,9 @@ local function read_hypr_gap_size()
             gap_size = val
         end
         f:close()
+    else
+        os.execute("mkdir -p " .. HOME .. "/.local/state/hypr")
+        print("mkdir -p " .. HOME .. "/.local/state/hypr")
     end
     return gap_size
 end
@@ -21,8 +24,8 @@ end
 local function main()
     local gap_size = read_hypr_gap_size()
 
-    local waybar_pid = 0
-    local waybar_state = 0
+    local waybar_pid = nil
+    local waybar_state = nil
 
     local f = io.open(WAYBAR_STATE_FILE, "r")
     if f then

@@ -24,6 +24,8 @@ local saved_pid = nil
 if f then
     saved_pid = f:read("n")
     f:close()
+else
+    os.execute("mkdir -p " .. HOME .. "/.local/state/hypr")
 end
 
 local active_pid = get_waybar_pid(saved_pid)
