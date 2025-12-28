@@ -3,6 +3,7 @@
 HOME = os.getenv("HOME")
 GAP_STATE_FILE = HOME .. "/.local/state/hypr/hypr_gap_state"
 WAYBAR_STATE_FILE = HOME .. "/.local/state/hypr/waybar_state"
+-- modify this to change the outer gap size
 MAX_GAP_SIZE = 5
 
 local function read_hypr_gap_size()
