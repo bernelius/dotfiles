@@ -23,7 +23,7 @@ local get_active_workspace = function()
         local _ = h:read("l")
         local workspace_id = h:read("l"):match("%d+")
         h:close()
-        return workspace_id
+        return tonumber(workspace_id)
     end
 end
 
@@ -54,8 +54,11 @@ if workspace_dest ~= active_workspace then
     local old_workspace = active_workspace
     active_workspace = workspace_dest
     local new_wallpaper = workspace_papers[workspace_dest]
-    if new_wallpaper and new_wallpaper ~= workspace_papers[old_workspace] then
-        os.execute("hyprctl hyprpaper wallpaper 'eDP-1, " .. workspace_papers[workspace_dest] .. "'")
+    if new_wallpaper then
+        if new_wallpaper ~= workspace_papers[old_workspace] then
+            --os.execute('notify-send "old wallpaper: ' .. workspace_papers[old_workspace] .. '"')
+            os.execute("hyprctl hyprpaper wallpaper 'eDP-1, " .. workspace_papers[workspace_dest] .. "'")
+        end
     else
         os.execute(
             "notify-send 'No wallpaper found for workspace "
@@ -63,7 +66,6 @@ if workspace_dest ~= active_workspace then
                 .. ". This workspace does not have a wallpaper set in wallpaper_changer.lua.'"
         )
     end
-
     -- sometimes hyprpaper crashes when switching workspaces too fast
     os.execute("pidof hyprpaper || hyprpaper &")
 end
