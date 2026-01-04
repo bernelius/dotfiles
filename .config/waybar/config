@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","custom/space","clock"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","cpu","bluetooth","network","battery"],
+        "modules-right": ["group/expand","cpu","bluetooth","network#general","network#wifi","custom/vpn","battery"],
 
 
         "hyprland/workspaces": {
@@ -51,15 +51,28 @@
                 "on-click": "shift_up"
             }
         },
-        "network": {
-            "format-wifi": "",
-            "format-ethernet":"",
-            "format-disconnected": "",
-            "tooltip-format-disconnected": "Error",
-            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-            "tooltip-format-ethernet": "{ifname} 🖧 ",
-            "on-click": "ghostty -e 'impala'"
+        "network#general": {
+            "format-wifi": "",
+            "format-ethernet": "",
+            "format-disconnected": "",
+            "format-linked": "",
+            "tooltip-format-ethernet": "{ifname}"
         },
+
+        "network#wifi": {
+            "interface": "wlan0",
+            "format-wifi": "",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+            "on-click": "ghostty -e 'gazelle'",
+        },
+
+        "custom/vpn": {
+            "exec": "nmcli -t -f DEVICE,TYPE,STATE device | grep -E ':(wireguard|dummy):connected' >/dev/null && echo  || echo ''",
+            "tooltip": true,
+            "tooltip-format": "VPN active",
+            "interval": 5
+        },
+
         "bluetooth": {
             "format-on": "󰂯",
             "format-off": "BT-off",

@@ -74,6 +74,7 @@ tooltip {
 #clock:hover,
 #custom-pacman:hover,
 #custom-notification:hover,
+#custom-vpn:hover,
 #bluetooth:hover,
 #network:hover,
 #battery:hover,
@@ -85,6 +86,12 @@ tooltip {
 }
 
 #custom-notification {
+  padding: 0px 5px;
+  transition: all 0.1s ease;
+  color: @text;
+}
+
+#custom-vpn {
   padding: 0px 5px;
   transition: all 0.1s ease;
   color: @text;
