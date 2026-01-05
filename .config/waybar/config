@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","custom/space","clock"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand","cpu","bluetooth","network#general","network#wifi","custom/vpn","battery"],
+        "modules-right": ["group/expand","memory","cpu","bluetooth","network#general","network#wifi","custom/vpn","battery"],
 
 
         "hyprland/workspaces": {
@@ -107,9 +107,15 @@
                 "󰁹"
             ],
         },
+        "memory": {
+            "format": "{percentage}% ",
+            "tooltip-format": "{used}GiB/{total}GiB Used",
+            "on-click": "ghostty -e 'btop'"
+        },
         "cpu": {
             "format": "{usage}% ", 
-            "tooltip": true
+            "tooltip": true,
+            "on-click": "ghostty -e 'btop'"
         },
         "custom/expand": {
             "format": "",
@@ -126,10 +132,7 @@
                 "transition-to-left": true,
                 "click-to-reveal": true
             },
-            "modules": ["custom/expand","memory","temperature","tray","custom/endpoint"],
-        },
-        "memory": {
-            "format": ""
+            "modules": ["custom/expand","temperature","tray","custom/endpoint"],
         },
         "temperature": {
             "critical-threshold": 80,
