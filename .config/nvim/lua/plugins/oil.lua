@@ -76,7 +76,7 @@ return {
                 ["."] = { "actions.select", mode = "n" },
                 ["!"] = { "actions.select", mode = "n" },
                 ["<C-v>"] = { "actions.select", opts = { vertical = true } },
-                ["<C-o>"] = { "actions.select", opts = { horizontal = true } },
+                --["<C-h>"] = { "actions.select", opts = { horizontal = true } },
                 ["<C-t>"] = { "actions.select", opts = { tab = true } },
                 ["<C-p>"] = "actions.preview",
                 ["<C-c>"] = { "actions.close", mode = "n" },

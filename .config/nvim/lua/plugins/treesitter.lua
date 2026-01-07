@@ -43,9 +43,7 @@ local ensureInstalled = {
         "query", -- treesitter query files (.scm)
         "requirements", -- python's `requirements.txt`
         "vimdoc", -- `:help` files
-        "dts",
         "devicetree",
-        "dosini",
     },
     embeddedLangs = {
         "comment",
