@@ -1,4 +1,7 @@
+default-action = "sh -c 'echo \"$MAKO_NOTIFICATION_BODY\" | wl-copy'"
+
 font=JetBrainsMonoNL Nerd Font Mono (monospace)
+
 background-color=#121212
 width=350
 height=200
