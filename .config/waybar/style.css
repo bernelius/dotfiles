@@ -162,6 +162,10 @@ tooltip {
   color: @green;
 }
 
+#battery.full {
+  color: @green;
+}
+
 #battery.warning:not(.charging) {
   color: @yellow;
 }

@@ -1,0 +1,11 @@
+[font]
+normal = { family = "JetBrains Mono Nerd Font Mono", style = "Regular" }
+size = 12.0
+
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"

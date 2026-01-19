@@ -17,10 +17,15 @@
                 "5": "P",
                 "6": "G",
                 "active": "",
+                "special": "X",
             },
             "persistent-workspaces": {
-                "*": [ 1,2,3,4,5,6 ]
-            }
+                "eDP-1": [ 1,2,3,4,5,6 ],
+                "HDMI-A-1": [ 7 ],
+            },
+            "show-special": true,
+            "special-visible-only": true
+            
         },
         "custom/notification": {
             "tooltip": false,
@@ -63,7 +68,7 @@
             "interface": "wlan0",
             "format-wifi": "",
             "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-            "on-click": "ghostty -e 'gazelle'",
+            "on-click": "alacritty --class=fuzzel -e 'gazelle'",
         },
 
         "custom/vpn": {
@@ -77,20 +82,18 @@
             "format-on": "󰂯",
             "format-off": "BT-off",
             "format-disabled": "󰂲",
-            "format-connected-battery": "{device_battery_percentage}% 󰂯",
-            "format-alt": "{device_alias} 󰂯",
             "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
             "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
             "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-            "on-click-right": "ghostty -e 'bluetui'",
+            "on-click": "alacritty --class=fuzzel -e 'bluetui'",
         }, 
         "battery": {
             "tooltip": true,
             "interval":30,
             "states": {
                 "good": 95,
-                "warning": 30,
+                "warning": 40,
                 "critical": 20
             },
             "tooltip-format": "{capacity}%",
@@ -110,12 +113,12 @@
         "memory": {
             "format": "{percentage}% ",
             "tooltip-format": "{used}GiB/{total}GiB Used",
-            "on-click": "ghostty -e 'btop'"
+            "on-click": "alacritty --class=fuzzel -e 'btop'"
         },
         "cpu": {
             "format": "{usage}% ", 
             "tooltip": true,
-            "on-click": "ghostty -e 'btop'"
+            "on-click": "alacritty --class=fuzzel -e 'btop'"
         },
         "custom/expand": {
             "format": "",

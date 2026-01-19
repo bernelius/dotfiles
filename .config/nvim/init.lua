@@ -1,5 +1,5 @@
-local tabsize = 2
-vim.opt.tabstop = tabsize * 4
+local tabsize = 4
+vim.opt.tabstop = tabsize * 2
 vim.opt.softtabstop = tabsize
 vim.opt.shiftwidth = tabsize
 vim.opt.smartindent = true

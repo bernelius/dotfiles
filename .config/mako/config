@@ -1,4 +1,4 @@
-default-action = "sh -c 'echo \"$MAKO_NOTIFICATION_BODY\" | wl-copy'"
+# default-action = sh -c "~/.config/mako/default_action.sh"
 
 font=JetBrainsMonoNL Nerd Font Mono (monospace)
 

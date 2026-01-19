@@ -1,7 +1,12 @@
 alias vim="v"
 alias n="v ."
 alias novim="nvim -u NONE"
-alias ..="cd .."
+alias .="cd .."
+alias ..="cd ../.."
+alias ...="cd ../../.."
+alias ....="cd ../../../.."
+alias .....="cd ../../../../.."
+alias ......="cd ../../../../../.."
 export PS1='%n %3~ %# '
 alias packy='sudo pacman -Syu'
 
@@ -59,6 +64,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 if [ -d "/mnt/c" ]; then
   alias rpr="cd /mnt/g/Black\ Banana\ Studios/REAPER\ (x64)/Scripts/Bob"
   alias open="explorer.exe"
+else
+  function open {
+    xdg-open "$1" > /dev/null 2>&1 &; disown
+  }
 fi
 
 export EDITOR="nvim"
@@ -94,7 +103,6 @@ source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 if [ -d "$HOME/.secrets" ]; then
   source "$HOME/.secrets/api-keys.sh"
 fi
-
 
 if [ -z "$TMUX" ]; then
   fastfetch

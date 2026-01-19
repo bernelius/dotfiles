@@ -16,6 +16,8 @@ return {
                 sql = { "pg_format" },
                 json = { "jq" },
                 bash = { "beautysh" },
+                sh = { "beautysh" },
+                zsh = { "beautysh" },
             },
             format_on_save = {
                 timeout_ms = 500,
