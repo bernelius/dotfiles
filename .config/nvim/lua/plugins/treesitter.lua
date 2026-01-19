@@ -107,7 +107,7 @@ return {
         })
 
         -- `ts_query_ls`: use the custom directory set in the treesitter config
-        local tsDir = require("nvim-treesitter.config").get_install_dir("parser")
+        local tsDir = require("nvim-treesitter.configs").get_install_dir("parser")
         vim.lsp.config("ts_query_ls", {
             init_options = { parser_install_directories = { tsDir } },
         })
