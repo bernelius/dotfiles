@@ -90,8 +90,6 @@ symbol = " "
 [hg_branch]
 symbol = " "
 
-[hostname]
-ssh_symbol = " "
 
 [java]
 symbol = " "
@@ -212,6 +210,14 @@ symbol = " "
 
 [zig]
 symbol = " "
+
+[username]
+style_user = "bold lavender"
+style_root = "bold red"
+
+[hostname]
+ssh_symbol = "$os"
+style = "bold green"
 
 [character]
 success_symbol = "[❯](peach)"
