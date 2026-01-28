@@ -58,20 +58,6 @@ symbol = " "
 [gcloud]
 symbol = " "
 
-[git_branch]
-symbol = " "
-disabled = true
-
-[git_commit]
-tag_symbol = '  '
-disabled = true
-
-[git_status]
-disabled = true
-
-[cmd_duration]
-disabled = true
-
 [golang]
 symbol = " "
 
@@ -211,6 +197,19 @@ symbol = " "
 [zig]
 symbol = " "
 
+[git_branch]
+symbol = " "
+style = "bold peach"
+
+[git_commit]
+tag_symbol = '  '
+
+[git_status]
+style = "bold maroon"
+
+[cmd_duration]
+disabled = true
+
 [username]
 style_user = "bold lavender"
 style_root = "bold red"
@@ -220,7 +219,7 @@ ssh_symbol = "$os"
 style = "bold green"
 
 [character]
-success_symbol = "[❯](peach)"
+success_symbol = "[❯](green)"
 error_symbol = "[❯](bold red)"
 
 [palettes.catppuccin_mocha]

@@ -109,7 +109,7 @@ source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 function zvm_after_init() {
     eval "$(starship init zsh)"
     #override starship's unhelpful prompt when missing closing quote or whatever
-    export PROMPT2='%_❯ '
+    export PROMPT2='Unclosed %_: '
 }
 
 
