@@ -83,10 +83,6 @@ export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export XDG_CONFIG_HOME="$HOME/.config"
 
-#case-insensitive matching
-autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*' menu select
 
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh --cmd cd)"
@@ -107,6 +103,14 @@ alias ff='fzf --preview "bat --color=always {}"'
 source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 
 # SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
+function zvm_after_init() {
+    eval "$(starship init zsh)"
+}
+
+#case-insensitive matching
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
 
 # pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >>"$SYMLINK_LOGGER" 2>&1 &
 if [ -d "$HOME/.secrets" ]; then
