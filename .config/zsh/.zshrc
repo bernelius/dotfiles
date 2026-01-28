@@ -98,14 +98,20 @@ alias la='eza --icons=always --group-directories-first --git --color=auto --all'
 alias lt='eza --icons=always --group-directories-first --git --color=auto --tree'
 alias ll='eza --icons=always --group-directories-first --git --color=auto -l'
 
-alias ff='fzf --preview "bat --color=always {}"'
+
+export FZF_CTRL_T_OPTS="
+  --height 100%
+  --reverse
+  --preview 'bat --color=always {}'"
 
 source "$HOME/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 
-# SYMLINK_LOGGER="$HOME/dotfiles/.config/zsh/dotfiles-watch.log"
 function zvm_after_init() {
     eval "$(starship init zsh)"
+    #override starship's unhelpful prompt when missing closing quote or whatever
+    export PROMPT2='%_❯ '
 }
+
 
 #case-insensitive matching
 autoload -Uz compinit && compinit
