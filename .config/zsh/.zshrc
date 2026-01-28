@@ -1,16 +1,25 @@
-alias vim="v"
 alias n="v ."
 alias novim="nvim -u NONE"
-alias .="cd .."
-alias ..="cd ../.."
-alias ...="cd ../../.."
-alias ....="cd ../../../.."
-alias .....="cd ../../../../.."
-alias ......="cd ../../../../../.."
-export PS1='%n %3~ %# '
 alias packy='sudo pacman -Syu'
-
 alias avante='nvim -c "lua vim.defer_fn(function()require(\"avante.api\").zen_mode()end, 100)"'
+
+
+cd-up() { 
+    cd .. 
+    zle reset-prompt
+}
+zle -N cd-up
+bindkey '^O' cd-up
+
+export PS1='%n %3~ %# '
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+
 case ":${PATH}:" in
   *:"$HOME/.local/bin":*)
     ;;
