@@ -2,7 +2,7 @@
 format = '$os$all'
 
 [os]
-style = "bold green"
+style = "7"
 disabled = false
 
 [aws]
@@ -36,6 +36,7 @@ symbol = " "
 symbol = " "
 
 [directory]
+style = "7"
 read_only = " 󰌾"
 
 [docker_context]
@@ -61,9 +62,17 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+disabled = true
 
 [git_commit]
 tag_symbol = '  '
+disabled = true
+
+[git_status]
+disabled = true
+
+[cmd_duration]
+disabled = true
 
 [golang]
 symbol = " "
@@ -207,5 +216,5 @@ symbol = " "
 symbol = " "
 
 [character]
-success_symbol = "[❯](bold green)"
+success_symbol = "[❯](7)"
 error_symbol = "[❯](bold red)"
