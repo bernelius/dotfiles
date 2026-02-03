@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 sessions = []
 windows = []
 
@@ -36,7 +38,7 @@ Window("lazygit", "lazygit")
 Session("dotfiles", "~/dotfiles/.config")
 Session("zmk workspace", "~/code/zmk-workspace")
 Session("VekstbarometerUSN", "~/code/vekstbarometer/indicator-updater")
-
+Session("Boolean Threads", "~/code/boolean-threads")
 
 with open("sesh.toml", "w") as f:
     for window in windows:

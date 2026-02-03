@@ -20,3 +20,9 @@ path = "~/code/vekstbarometer/indicator-updater"
 startup_command = "ROOT=~/code/vekstbarometer/indicator-updater && clear && figlet -w 100 -f big 'VekstbarometerUSN' | lolcat"
 windows = ["lazygit"]
 
+[[session]]
+name = "Boolean Threads"
+path = "~/code/boolean-threads"
+startup_command = "ROOT=~/code/boolean-threads && clear && figlet -w 100 -f big 'Boolean Threads' | lolcat"
+windows = ["lazygit"]
+
