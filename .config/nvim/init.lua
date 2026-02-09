@@ -63,6 +63,7 @@ require("bernelius.remaps")
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
 require("lsp")
+require("smart-paste").setup()
 
 vim.filetype.add({
     pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },

@@ -1,28 +1,26 @@
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
--- Use system clipboard for yanking
-vim.keymap.set({ "n", "v" }, "y", '"+y', { noremap = true, silent = true })
-vim.keymap.set("n", "yy", '"+yy', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>yy", '"+yy')
 
 -- Delete without affecting registers
-vim.keymap.set({ "n", "v" }, "d", '"_d', { noremap = true, silent = true })
-vim.keymap.set("n", "dd", '"_dd', { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "d", '"_d')
+vim.keymap.set("n", "dd", '"_dd')
 
 -- x cuts to clipboard in visual mode, deletes into void otherwise
-vim.keymap.set("v", "x", '"+x', { noremap = true, silent = true })
-vim.keymap.set("n", "x", '"_x', { noremap = true, silent = true })
--- big X yanks the while line super hard, removing it in the process
-vim.keymap.set("n", "X", '"+dd', { noremap = true, silent = true })
+vim.keymap.set("v", "x", '"+x')
+vim.keymap.set("n", "x", '"_x')
+-- big X yanks the whole line super hard, removing it in the process
+vim.keymap.set("n", "X", '"+dd')
 
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
 
-vim.keymap.set("n", "<leader><Left>", ":bnext<CR>")
+vim.keymap.set("n", "<leader><Left>", ":bprev<CR>")
 vim.keymap.set("n", "<leader><Down>", ":blast<CR>")
 vim.keymap.set("n", "<leader><Up>", ":bfirst<CR>")
-vim.keymap.set("n", "<leader><Right>", ":bprev<CR>")
+vim.keymap.set("n", "<leader><Right>", ":bnext<CR>")
 vim.keymap.set("n", "<leader>h", ":bprev<CR>")
 vim.keymap.set("n", "<leader>j", ":blast<CR>")
 vim.keymap.set("n", "<leader>k", ":bfirst<CR>")
-vim.keymap.set("n", "<leader>l", ":bprev<CR>")
+vim.keymap.set("n", "<leader>l", ":bnext<CR>")
 
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
