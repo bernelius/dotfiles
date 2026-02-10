@@ -46,17 +46,17 @@ assert(actions[choice], msg)
 local action = actions[choice]
 
 local active_workspace = get_active_workspace()
-local commands = {}
+local shell_cmds = {}
 if workspace_dest ~= active_workspace then
-    table.insert(commands, string.format("hyprctl workspace %s %d", action, workspace_dest))
+    table.insert(shell_cmds, string.format("hyprctl dispatch %s %d", action, workspace_dest))
     local old_workspace = active_workspace
     active_workspace = workspace_dest
     local new_wallpaper = workspace_papers[workspace_dest]
     if new_wallpaper then
         if new_wallpaper ~= workspace_papers[old_workspace] then
             table.insert(
-                commands,
-                string.format("hyprpaper wallpaper 'eDP-1, %s, %s'", new_wallpaper.path, new_wallpaper.fit_mode)
+                shell_cmds,
+                string.format("hyprctl hyprpaper wallpaper ',%s,%s'", new_wallpaper.path, new_wallpaper.fit_mode)
             )
         end
     else
@@ -66,8 +66,11 @@ if workspace_dest ~= active_workspace then
                 .. ". This workspace does not have a wallpaper set in wallpaper_changer.lua.'"
         )
     end
-    local final_batch = table.concat(commands, " ; ")
     -- sometimes hyprpaper crashes when switching workspaces too fast
     local revival_command = "(pidof hyprpaper >/dev/null || (hyprpaper &))"
-    os.execute(string.format([[hyprctl --batch "%s" ; %s &]], final_batch, revival_command))
+    table.insert(shell_cmds, revival_command)
+    local final_batch = table.concat(shell_cmds, " && ")
+    local final_command = string.format("( %s ) &", final_batch)
+    print(final_command)
+    os.execute(final_command)
 end
