@@ -1,10 +1,10 @@
 #!/usr/bin/env lua
 
 local wallpapers = {
-    multi = "~/docs/img/wallpapers/multiman.png",
-    smooshy = "~/docs/img/wallpapers/smooshy_king.png",
-    black = "~/docs/img/wallpapers/black_pixels.png",
-    cleese = "~/docs/img/wallpapers/soviet_cleese.png",
+    multi = { path = "~/docs/img/wallpapers/multiman.png", fit_mode = "cover" },
+    smooshy = { path = "~/docs/img/wallpapers/smooshy_king.png", fit_mode = "cover" },
+    black = { path = "~/docs/img/wallpapers/black_pixels.png", fit_mode = "tile" },
+    cleese = { path = "~/docs/img/wallpapers/soviet_cleese.png", fit_mode = "cover" },
 }
 
 local workspace_papers = {
@@ -27,37 +27,37 @@ local get_active_workspace = function()
     end
 end
 
-local choice = "set"
+local msg = "Invalid input. This script takes a workspace number above 0, and optionally set|move. In that order."
 local actions = {
     set = "workspace",
     move = "movetoworkspace",
 }
+local choice = "set"
 
 local workspace_dest = tonumber(arg[1])
-assert(
-    workspace_dest and workspace_dest >= 1,
-    "Invalid workspace. This script takes a workspace number, and optionally set|move. In that order."
-)
+assert(workspace_dest and workspace_dest > 0, msg)
+
 if arg[2] then
     choice = arg[2]
-    local valid_actions = { set = true, move = true }
-    if not valid_actions[choice] then
-        error("Invalid action. This script takes a workspace number, and optionally set|move. In that order.")
-    end
 end
+
+assert(actions[choice], msg)
 
 local action = actions[choice]
 
 local active_workspace = get_active_workspace()
+local commands = {}
 if workspace_dest ~= active_workspace then
-    os.execute("hyprctl dispatch " .. action .. " " .. workspace_dest)
+    table.insert(commands, string.format("hyprctl workspace %s %d", action, workspace_dest))
     local old_workspace = active_workspace
     active_workspace = workspace_dest
     local new_wallpaper = workspace_papers[workspace_dest]
     if new_wallpaper then
         if new_wallpaper ~= workspace_papers[old_workspace] then
-            --os.execute('notify-send "old wallpaper: ' .. workspace_papers[old_workspace] .. '"')
-            os.execute("hyprctl hyprpaper wallpaper 'eDP-1, " .. workspace_papers[workspace_dest] .. "'")
+            table.insert(
+                commands,
+                string.format("hyprpaper wallpaper 'eDP-1, %s, %s'", new_wallpaper.path, new_wallpaper.fit_mode)
+            )
         end
     else
         os.execute(
@@ -66,6 +66,8 @@ if workspace_dest ~= active_workspace then
                 .. ". This workspace does not have a wallpaper set in wallpaper_changer.lua.'"
         )
     end
+    local final_batch = table.concat(commands, " ; ")
     -- sometimes hyprpaper crashes when switching workspaces too fast
-    os.execute("pidof hyprpaper || hyprpaper &")
+    local revival_command = "(pidof hyprpaper >/dev/null || (hyprpaper &))"
+    os.execute(string.format([[hyprctl --batch "%s" ; %s &]], final_batch, revival_command))
 end
