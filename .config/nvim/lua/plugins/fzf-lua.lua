@@ -1,14 +1,18 @@
 return {
     "ibhagwan/fzf-lua",
-    -- optional for icon support
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    -- or if using mini.icons/mini.nvim
-    -- dependencies = { "nvim-mini/mini.icons" },
-    ---@module "fzf-lua"
-    ---@type fzf-lua.Config|{}
-    ---@diagnostics disable: missing-fields
+    config = function()
+        require("fzf-lua").setup({
+            winopts = {
+                height = 1,
+                width = 1,
+                row = 0.35,
+                col = 0.5,
+                border = "single",
+            },
+        })
+    end,
     opts = {},
-    ---@diagnostics enable: missing-fields
     vim.keymap.set("n", "<leader>ff", ":FzfLua global<CR>", { desc = "Fuzzy find files" }),
     vim.keymap.set("n", "<leader>fb", ":FzfLua builtin<CR>", { desc = "Fzf-lua builtins" }),
     vim.keymap.set("n", "<leader>fg", ":FzfLua live_grep<CR>", { desc = "Fzf-lua live grep" }),
