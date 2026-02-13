@@ -18,6 +18,7 @@ return {
                 bash = { "beautysh" },
                 sh = { "beautysh" },
                 zsh = { "beautysh" },
+                kotlin = { "ktlint -F" },
             },
             format_on_save = {
                 timeout_ms = 500,
@@ -27,7 +28,7 @@ return {
         require("conform").formatters = {
             stylua = {
                 indent_type = "Spaces",
-                indent_width = 2,
+                indent_width = 4,
             },
         }
     end,
