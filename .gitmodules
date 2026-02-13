@@ -1,0 +1,3 @@
+[submodule ".config/mpv/scripts/simple-mpv-webui"]
+	path = .config/mpv/scripts/simple-mpv-webui
+	url = git@github.com:bernelius/simple-mpv-webui
