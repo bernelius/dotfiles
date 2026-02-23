@@ -18,10 +18,14 @@ return {
                 bash = { "beautysh" },
                 sh = { "beautysh" },
                 zsh = { "beautysh" },
-                kotlin = { "ktlint -F" },
+                kotlin = { "ktlint" },
             },
-            format_on_save = {
-                timeout_ms = 500,
+            -- format_on_save = {
+            --     timeout_ms = 2000,
+            --     async = true,
+            --     lsp_format = "fallback",
+            -- },
+            format_after_save = {
                 lsp_format = "fallback",
             },
         })
@@ -29,6 +33,9 @@ return {
             stylua = {
                 indent_type = "Spaces",
                 indent_width = 4,
+            },
+            ktlint = {
+                prepend_args = { "--format" },
             },
         }
     end,

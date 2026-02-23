@@ -122,7 +122,8 @@ zstyle ':completion:*' menu select
 
 # pgrep -f dotfiles-symlink-watcher.sh >/dev/null || "$HOME/dotfiles/.config/zsh/dotfiles-symlink-watcher.sh" >>"$SYMLINK_LOGGER" 2>&1 &
 if [ -d "$HOME/.secrets" ]; then
-  source "$HOME/.secrets/api-keys.sh"
+  source "$HOME/.secrets/api-keys"
+  source "$HOME/.secrets/secrets"
 fi
 
 if [ -z "$TMUX" ]; then
