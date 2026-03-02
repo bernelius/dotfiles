@@ -1,0 +1,49 @@
+(defcfg 
+    linux-dev-names-include (
+      "TUXEDO Keyboard"
+      "Intel HID events"
+      "AT Translated Set 2 keyboard"
+    )
+    concurrent-tap-hold yes
+    process-unmapped-keys yes
+)
+
+
+(defvar
+    dly-fast 30
+)
+
+(defsrc 
+    tab q w e r t
+    caps a s d f g
+    lsft < z x c v
+)
+
+(deflayer default
+    _      _ _ _ _ _
+    @esctl _ _ _ _ _
+    _      _ _ _ _ _
+)
+
+(deflayer numpad
+    _      _ 7 8 9 _
+    @esctl 0 4 5 6 up
+    _      _ 1 2 3 down
+)
+
+(defalias
+    esctl (tap-hold-press 200 200 esc lctl)
+    ;; aa (fork (unicode å) (unicode Å) (lsft rsft))
+    ;; oe (fork (unicode ø) (unicode Ø) (lsft rsft))
+    ;; ae (fork (unicode æ) (unicode Æ) (lsft rsft))
+)
+
+(defchordsv2
+  (q w)    S-9                $dly-fast     all-released ()
+  (a s)    [                  $dly-fast     all-released ()
+  (z x)    S-[                $dly-fast     all-released ()
+  (i o)    S-0                $dly-fast     all-released ()
+  (i o h)  (macro S-0 left)   $dly-fast     all-released ()
+  (k l)    ]                  $dly-fast     all-released ()
+  (, .)    S-]                $dly-fast     all-released ()
+)

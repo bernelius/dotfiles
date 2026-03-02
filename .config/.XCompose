@@ -1,0 +1,8 @@
+include "%L"
+
+
+<Multi_key> <o> <slash> : "œ"
+<Multi_key> <O> <slash> : "Œ"
+
+<Multi_key> <o> <e> : "ø"
+<Multi_key> <O> <E> : "Ø"
