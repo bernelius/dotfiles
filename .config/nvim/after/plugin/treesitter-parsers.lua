@@ -1,0 +1,11 @@
+-- local treesitter = require("nvim-treesitter.install")
+-- treesitter.grammar_install("kanata", {
+--     install_info = {
+--         url = "https://github.com/postsolar/tree-sitter-kanata/",
+--         files = { "src/parser.c" },
+--         branch = "master",
+--     },
+--     filetype = "kbd",
+-- })
+-- I fail to succeed in installing custom parsers for nvim-treesitter.
+-- Revisit later maybe.
