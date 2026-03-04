@@ -1,0 +1,8 @@
+normal = "#ffffff"
+primary = "#00ff9f"
+secondary = "#00b8ff"
+tertiary = "#bd00ff"
+success = "#39ff14"
+error = "#ff003c"
+warning = "#ffe700"
+info = "#00f0ff"

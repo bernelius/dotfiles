@@ -4,3 +4,6 @@ cleanup.sh
 .gitignore
 .git
 .stowrc
+.gitmodules
+Justfile
+.luarc.json
