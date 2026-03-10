@@ -18,7 +18,7 @@ return {
                 bash = { "beautysh" },
                 sh = { "beautysh" },
                 zsh = { "beautysh" },
-                kotlin = { "ktlint" },
+                -- kotlin = { "ktlint" },
             },
             -- format_on_save = {
             --     timeout_ms = 2000,
