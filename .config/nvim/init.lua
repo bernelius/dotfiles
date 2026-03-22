@@ -59,7 +59,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 require("bernelius.remaps")
-
 -- Setup lazy.nvim
 require("lazy").setup("plugins")
 require("lsp")

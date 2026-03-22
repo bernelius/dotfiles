@@ -36,10 +36,12 @@ class Window:
 Window("lazygit", "lazygit")
 
 Session("dotfiles", "~/dotfiles/.config")
+Session("nvim config", "~/dotfiles/.config/nvim")
+Session("zsh config", "~/dotfiles/.config/zsh")
 Session("zmk workspace", "~/code/zmk-workspace")
 Session("VekstbarometerUSN", "~/code/vekstbarometer/indicator-updater")
 Session("Boolean Threads", "~/code/boolean-threads")
-Session("InvoiceGen", "~/code/invoice-gen")
+Session("Abrechnung", "~/code/abrechnung")
 
 with open("sesh.toml", "w") as f:
     for window in windows:

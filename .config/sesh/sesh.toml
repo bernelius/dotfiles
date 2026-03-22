@@ -27,8 +27,8 @@ startup_command = "ROOT=~/code/boolean-threads && clear && figlet -w 100 -f big 
 windows = ["lazygit"]
 
 [[session]]
-name = "InvoiceGen"
-path = "~/code/invoice-gen"
-startup_command = "ROOT=~/code/invoice-gen && clear && figlet -w 100 -f big 'InvoiceGen' | lolcat"
+name = "Abrechnung"
+path = "~/code/abrechnung"
+startup_command = "ROOT=~/code/abrechnung && clear && figlet -w 100 -f big 'Abrechnung' | lolcat"
 windows = ["lazygit"]
 

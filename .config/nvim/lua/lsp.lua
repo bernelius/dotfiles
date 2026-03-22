@@ -1,18 +1,48 @@
-vim.lsp.enable("eslint")
-vim.lsp.enable("djlsp")
-vim.lsp.enable("tailwindcss")
-vim.lsp.enable("jdtls")
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("clangd")
-vim.lsp.enable("html")
-vim.lsp.enable("bashls")
-vim.lsp.enable("cssls")
-vim.lsp.enable("ruff")
-vim.lsp.enable("pyright")
-vim.lsp.enable("jsonls")
-vim.lsp.enable("postgres_lsp")
-vim.lsp.enable("hyprls")
-vim.lsp.enable("ginko_ls")
-vim.lsp.enable("kotlin_lsp")
-vim.lsp.enable("taplo")
+-- vim.lsp.enable("eslint")
+-- vim.lsp.enable("djlsp")
+-- vim.lsp.enable("tailwindcss")
+-- vim.lsp.enable("jdtls")
+-- vim.lsp.enable("lua_ls")
+-- vim.lsp.enable("ts_ls")
+-- vim.lsp.enable("clangd")
+-- vim.lsp.enable("html")
+-- vim.lsp.enable("bashls")
+-- vim.lsp.enable("cssls")
+-- vim.lsp.enable("ruff")
+-- vim.lsp.enable("pyright")
+-- vim.lsp.enable("jsonls")
+-- vim.lsp.enable("postgres_lsp")
+-- vim.lsp.enable("hyprls")
+-- vim.lsp.enable("ginko_ls")
+-- vim.lsp.enable("kotlin_lsp")
+-- vim.lsp.enable("taplo")
+require("mason-lspconfig").setup({
+    ensure_installed = {
+        "eslint",
+        "djlsp",
+        "tailwindcss",
+        "jdtls",
+        "lua_ls",
+        "ts_ls",
+        "clangd",
+        "html",
+        "bashls",
+        "cssls",
+        "ruff",
+        "pyright",
+        "jsonls",
+        "postgres_lsp",
+        "hyprls",
+        "ginko_ls",
+        "kotlin_lsp",
+        "taplo",
+        "systemd_lsp",
+        "just",
+        "marksman",
+    },
+    automatic_enable = {
+        exclude = {
+            "kotlin_lsp",
+        },
+    },
+})
