@@ -16,6 +16,7 @@ local ensureInstalled = {
         "swift",
         "hyprlang",
         "vim",
+        "kotlin",
     },
     dataFormats = {
         "json",
@@ -40,9 +41,9 @@ local ensureInstalled = {
         "gitcommit",
         "gitignore",
         "just",
-        "query", -- treesitter query files (.scm)
+        "query",        -- treesitter query files (.scm)
         "requirements", -- python's `requirements.txt`
-        "vimdoc", -- `:help` files
+        "vimdoc",       -- `:help` files
         "devicetree",
     },
     embeddedLangs = {
