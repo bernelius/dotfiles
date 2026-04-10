@@ -1,23 +1,8 @@
--- vim.lsp.enable("eslint")
--- vim.lsp.enable("djlsp")
--- vim.lsp.enable("tailwindcss")
--- vim.lsp.enable("jdtls")
--- vim.lsp.enable("lua_ls")
--- vim.lsp.enable("ts_ls")
--- vim.lsp.enable("clangd")
--- vim.lsp.enable("html")
--- vim.lsp.enable("bashls")
--- vim.lsp.enable("cssls")
--- vim.lsp.enable("ruff")
--- vim.lsp.enable("pyright")
--- vim.lsp.enable("jsonls")
--- vim.lsp.enable("postgres_lsp")
--- vim.lsp.enable("hyprls")
--- vim.lsp.enable("ginko_ls")
--- vim.lsp.enable("kotlin_lsp")
--- vim.lsp.enable("taplo")
-require("mason-lspconfig").setup({
+require("mason-tool-installer").setup({
+    auto_update = true,
+    debounce_hours = 12,
     ensure_installed = {
+        -- lsp
         "eslint",
         "djlsp",
         "tailwindcss",
@@ -39,7 +24,17 @@ require("mason-lspconfig").setup({
         "systemd_lsp",
         "just",
         "marksman",
+        -- format/lint
+        "djlint",
+        "beautysh",
+        "jq",
+        "pgformatter",
+        "prettierd",
+        "stylua",
     },
+})
+
+require("mason-lspconfig").setup({
     automatic_enable = {
         exclude = {
             "kotlin_lsp",

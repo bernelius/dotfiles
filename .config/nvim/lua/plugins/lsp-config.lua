@@ -15,4 +15,10 @@ return {
             "neovim/nvim-lspconfig",
         },
     },
+
+    -- mason-tool-installer for installing non-lsp tools automatically
+    {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+    },
+
 }
