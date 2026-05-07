@@ -44,3 +44,9 @@ path = "~/code/abrechnung"
 startup_command = "ROOT=~/code/abrechnung && clear && figlet -w 100 -f big 'Abrechnung' | lolcat; exec $SHELL -i"
 windows = ["lazygit"]
 
+[[session]]
+name = "Obj2100 Exam"
+path = "~/code/obj2100-exam"
+startup_command = "ROOT=~/code/obj2100-exam && clear && figlet -w 100 -f big 'Obj2100 Exam' | lolcat; exec $SHELL -i"
+windows = ["lazygit"]
+

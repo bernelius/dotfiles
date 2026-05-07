@@ -4,6 +4,8 @@ set relativenumber
 set scrolloff=5
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 
 nmap <leader>ff <Action>(SearchEverywhere)
 nmap <leader>fg <Action>(FindInPath)
