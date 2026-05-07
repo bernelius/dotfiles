@@ -1,0 +1,21 @@
+let mapleader=" "
+
+set relativenumber
+set scrolloff=5
+set incsearch
+set hlsearch
+
+nmap <leader>ff <Action>(SearchEverywhere)
+nmap <leader>fg <Action>(FindInPath)
+
+nmap gr <Action>(FindUsages)
+
+" Navigation
+nmap <leader>e <Action>(RecentFiles)
+
+xmap <leader>y "+y
+nmap <leader>yy "+yy
+
+" Paste from system clipboard
+nmap <leader>p "+p
+nmap <leader>P "+P

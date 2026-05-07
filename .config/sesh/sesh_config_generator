@@ -20,7 +20,7 @@ class Session:
 
     def __str__(self):
         windows_str = "[" + ", ".join(f'"{w}"' for w in self.windows) + "]"
-        return f'[[session]]\nname = "{self.name}"\npath = "{self.path}"\nstartup_command = "{self.startup_command}"\nwindows = {windows_str}\n\n'
+        return f'[[session]]\nname = "{self.name}"\npath = "{self.path}"\nstartup_command = "{self.startup_command}; exec $SHELL -i"\nwindows = {windows_str}\n\n'
 
 
 class Window:
@@ -30,7 +30,7 @@ class Window:
         windows.append(self)
 
     def __str__(self):
-        return f'[[window]]\nname = "{self.name}"\nstartup_script = "{self.startup_script}"\n\n'
+        return f'[[window]]\nname = "{self.name}"\nstartup_script = "{self.startup_script}; exec $SHELL -i"\n\n'
 
 
 Window("lazygit", "lazygit")

@@ -1,34 +1,46 @@
 [[window]]
 name = "lazygit"
-startup_script = "lazygit"
+startup_script = "lazygit; exec $SHELL -i"
 
 [[session]]
 name = "dotfiles"
 path = "~/dotfiles/.config"
-startup_command = "ROOT=~/dotfiles/.config && clear && figlet -w 100 -f big 'dotfiles' | lolcat"
+startup_command = "ROOT=~/dotfiles/.config && clear && figlet -w 100 -f big 'dotfiles' | lolcat; exec $SHELL -i"
+windows = ["lazygit"]
+
+[[session]]
+name = "nvim config"
+path = "~/dotfiles/.config/nvim"
+startup_command = "ROOT=~/dotfiles/.config/nvim && clear && figlet -w 100 -f big 'nvim config' | lolcat; exec $SHELL -i"
+windows = ["lazygit"]
+
+[[session]]
+name = "zsh config"
+path = "~/dotfiles/.config/zsh"
+startup_command = "ROOT=~/dotfiles/.config/zsh && clear && figlet -w 100 -f big 'zsh config' | lolcat; exec $SHELL -i"
 windows = ["lazygit"]
 
 [[session]]
 name = "zmk workspace"
 path = "~/code/zmk-workspace"
-startup_command = "ROOT=~/code/zmk-workspace && clear && figlet -w 100 -f big 'zmk workspace' | lolcat"
+startup_command = "ROOT=~/code/zmk-workspace && clear && figlet -w 100 -f big 'zmk workspace' | lolcat; exec $SHELL -i"
 windows = ["lazygit"]
 
 [[session]]
 name = "VekstbarometerUSN"
 path = "~/code/vekstbarometer/indicator-updater"
-startup_command = "ROOT=~/code/vekstbarometer/indicator-updater && clear && figlet -w 100 -f big 'VekstbarometerUSN' | lolcat"
+startup_command = "ROOT=~/code/vekstbarometer/indicator-updater && clear && figlet -w 100 -f big 'VekstbarometerUSN' | lolcat; exec $SHELL -i"
 windows = ["lazygit"]
 
 [[session]]
 name = "Boolean Threads"
 path = "~/code/boolean-threads"
-startup_command = "ROOT=~/code/boolean-threads && clear && figlet -w 100 -f big 'Boolean Threads' | lolcat"
+startup_command = "ROOT=~/code/boolean-threads && clear && figlet -w 100 -f big 'Boolean Threads' | lolcat; exec $SHELL -i"
 windows = ["lazygit"]
 
 [[session]]
 name = "Abrechnung"
 path = "~/code/abrechnung"
-startup_command = "ROOT=~/code/abrechnung && clear && figlet -w 100 -f big 'Abrechnung' | lolcat"
+startup_command = "ROOT=~/code/abrechnung && clear && figlet -w 100 -f big 'Abrechnung' | lolcat; exec $SHELL -i"
 windows = ["lazygit"]
 
