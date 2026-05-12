@@ -16,7 +16,7 @@ vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.swapfile = false
-vim.lsp.codelens = true
+vim.lsp.codelens.enable(true)
 
 -- WSL clipboard support through win32yank
 if vim.fn.has("wsl") == 1 and vim.fn.executable("win32yank.exe") == 1 then
