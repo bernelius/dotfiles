@@ -1,83 +1,42 @@
-#!/usr/bin/env lua
+local M = {}
 
-HOME = os.getenv("HOME")
-GAP_STATE_FILE = HOME .. "/.local/state/hypr/hypr_gap_state"
-WAYBAR_STATE_FILE = HOME .. "/.local/state/hypr/waybar_state"
--- modify this to change the outer gap size
-MAX_GAP_SIZE = 5
+local state = require("scripts.state")
+local waybar_launcher = require("scripts.waybar_launcher")
 
-local function read_hypr_gap_size()
-    local gap_size = MAX_GAP_SIZE
-    local f = io.open(GAP_STATE_FILE, "r")
-    if f then
-        local val = f:read("*n")
-        if val then
-            gap_size = val
-        end
-        f:close()
-    else
-        os.execute("mkdir -p " .. HOME .. "/.local/state/hypr")
-        print("mkdir -p " .. HOME .. "/.local/state/hypr")
+local function pidof(name)
+    local h = io.popen("pidof " .. name)
+    if h then
+        local out = h:read("*a")
+        h:close()
+        return tonumber(out:match("%d+"))
     end
-    return gap_size
+    return nil
 end
 
-local function main()
-    local gap_size = read_hypr_gap_size()
-
-    local waybar_pid = nil
-    local waybar_state = nil
-
-    local f = io.open(WAYBAR_STATE_FILE, "r")
-    if f then
-        waybar_pid = f:read("n")
-        waybar_state = f:read("n")
-        f:close()
+function M.toggle()
+    -- health check: if waybar is missing, relaunch it and reset to defaults
+    if not pidof("waybar") then
+        waybar_launcher.launch()
+        state.gap_size = state.max_gap_size
+        state.waybar_visible = true
+        hl.config({ general = { gaps_out = state.gap_size } })
+        return
     end
 
-    if not waybar_pid or not waybar_state then
-        print("The waybar state file is bad. Killing all waybars and relaunching with waybar_launcher.")
-        os.execute("killall waybar")
-
-        require("waybar_launcher")
-        return 1
-    end
-
-    if waybar_state == 1 then
-        waybar_state = 0
+    -- toggle gap and waybar visibility in lockstep
+    if state.gap_size > 0 then
+        state.gap_size = 0
+        state.waybar_visible = false
     else
-        waybar_state = 1
+        state.gap_size = state.max_gap_size
+        state.waybar_visible = true
     end
 
-    os.execute("kill -s USR1 " .. waybar_pid)
+    -- apply gap using the Hyprland Lua API
+    hl.config({ general = { gaps_out = state.gap_size } })
 
-    f = io.open(WAYBAR_STATE_FILE, "w")
-    if f then
-        f:write(waybar_pid .. "\n" .. waybar_state)
-        f:close()
-    end
-
-    if gap_size > 0 then
-        gap_size = 0
-    else
-        gap_size = MAX_GAP_SIZE
-    end
-
-    if gap_size == 0 and waybar_state ~= 0 or waybar_state == 0 and gap_size ~= 0 then
-        -- if we are here it means the two states are out of sync
-        print("gap size is ", gap_size, "waybar state is ", waybar_state)
-        return 2
-    end
-
-    -- apply
-    os.execute("hyprctl keyword general:gaps_out " .. gap_size)
-
-    -- save new state
-    f = io.open(GAP_STATE_FILE, "w")
-    if f then
-        f:write(gap_size)
-        f:close()
-    end
+    -- toggle waybar visibility via SIGUSR1 (always targets live process)
+    os.execute("killall -s USR1 waybar 2>/dev/null")
 end
 
-main()
+return M
