@@ -34,6 +34,7 @@ class Window:
 
 
 Window("lazygit", "lazygit")
+Window("logs", "cd ~/.local/share/abrechnung/logs")
 
 Session("dotfiles", "~/dotfiles/.config")
 Session("nvim config", "~/dotfiles/.config/nvim")
@@ -41,7 +42,7 @@ Session("zsh config", "~/dotfiles/.config/zsh")
 Session("zmk workspace", "~/code/zmk-workspace")
 Session("VekstbarometerUSN", "~/code/vekstbarometer/indicator-updater")
 Session("Boolean Threads", "~/code/boolean-threads")
-Session("Abrechnung", "~/code/abrechnung")
+Session("Abrechnung", "~/code/abrechnung", windows=["lazygit", "logs"])
 Session("Obj2100 Exam", "~/code/obj2100-exam")
 
 with open("sesh.toml", "w") as f:

@@ -116,7 +116,7 @@ hl.config({
         },
 
         resize_on_border = true,
-        allow_tearing = false,
+        allow_tearing = true,
         layout = "dwindle",
     },
 
@@ -358,6 +358,19 @@ hl.window_rule({
     name = "ignore-maximize",
     match = { class = ".*" },
     suppress_event = "maximize",
+})
+
+hl.window_rule({
+    name = "float-battle-net-launcher",
+    match = { title = "^Battle.net.*" },
+    float = true,
+    fullscreen = true,
+})
+
+hl.window_rule({
+    name = "tear-diablo-2",
+    match = { title = "^Diablo II: Resurrected$" },
+    immediate = true,
 })
 
 hl.window_rule({

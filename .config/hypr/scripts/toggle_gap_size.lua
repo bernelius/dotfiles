@@ -14,6 +14,7 @@ local function pidof(name)
 end
 
 function M.toggle()
+    hl.notification.get()
     -- health check: if waybar is missing, relaunch it and reset to defaults
     if not pidof("waybar") then
         waybar_launcher.launch()

@@ -39,14 +39,18 @@ local function change_workspace(workspace_dest, choice)
     local new_wallpaper = workspace_papers[workspace_dest]
     if new_wallpaper then
         if new_wallpaper ~= workspace_papers[last_workspace] then
-            hl.exec_cmd(string.format("hyprctl hyprpaper wallpaper ',%s,%s'", new_wallpaper.path, new_wallpaper.fit_mode))
+            hl.exec_cmd(
+                string.format("hyprctl hyprpaper wallpaper ',%s,%s'", new_wallpaper.path, new_wallpaper.fit_mode)
+            )
         end
     else
-        hl.exec_cmd(
-            "notify-send 'No wallpaper found for workspace "
+        hl.notification.create({
+            text = "No wallpaper found for workspace "
                 .. workspace_dest
-                .. ". This workspace does not have a wallpaper set in wallpaper_changer.lua.'"
-        )
+                .. ". This workspace does not have a wallpaper set in wallpaper_changer.lua",
+            time = 3000,
+            icon = 0,
+        })
     end
     -- sometimes hyprpaper crashes when switching workspaces too fast
     hl.exec_cmd("(pidof hyprpaper >/dev/null || (hyprpaper &))")

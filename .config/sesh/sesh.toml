@@ -2,6 +2,10 @@
 name = "lazygit"
 startup_script = "lazygit; exec $SHELL -i"
 
+[[window]]
+name = "logs"
+startup_script = "cd ~/.local/share/abrechnung/logs; exec $SHELL -i"
+
 [[session]]
 name = "dotfiles"
 path = "~/dotfiles/.config"
@@ -42,7 +46,7 @@ windows = ["lazygit"]
 name = "Abrechnung"
 path = "~/code/abrechnung"
 startup_command = "ROOT=~/code/abrechnung && clear && figlet -w 100 -f big 'Abrechnung' | lolcat; exec $SHELL -i"
-windows = ["lazygit"]
+windows = ["lazygit", "logs"]
 
 [[session]]
 name = "Obj2100 Exam"
