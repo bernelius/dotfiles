@@ -368,6 +368,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "fullscreen-warcraft-3",
+    match = { title = "^Warcraft III$" },
+    float = true,
+    fullscreen = true,
+})
+
+hl.window_rule({
     name = "tear-diablo-2",
     match = { title = "^Diablo II: Resurrected$" },
     immediate = true,

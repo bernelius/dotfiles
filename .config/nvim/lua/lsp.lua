@@ -3,7 +3,6 @@ require("mason-tool-installer").setup({
     debounce_hours = 12,
     ensure_installed = {
         -- lsp
-        "eslint",
         "djlsp",
         "tailwindcss",
         "jdtls",
@@ -26,6 +25,7 @@ require("mason-tool-installer").setup({
         "marksman",
         -- format/lint
         "djlint",
+        "eslint_d",
         "beautysh",
         "jq",
         "pgformatter",
