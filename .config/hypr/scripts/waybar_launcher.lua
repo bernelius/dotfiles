@@ -13,12 +13,16 @@ local function pidof(name)
 end
 
 function M.launch()
-    -- kill any running waybars before launching
-    os.execute("killall waybar 2>/dev/null")
-
-    os.execute("waybar &")
+    -- restart via systemd user service so crash recovery is handled automatically
+    os.execute("systemctl --user restart waybar")
     state.waybar_pid = pidof("waybar")
     state.waybar_visible = true
+end
+
+function M.stop()
+    os.execute("systemctl --user stop waybar")
+    state.waybar_pid = nil
+    state.waybar_visible = false
 end
 
 function M.get_pid()
