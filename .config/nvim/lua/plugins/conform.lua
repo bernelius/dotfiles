@@ -18,6 +18,7 @@ return {
                 bash = { "beautysh" },
                 sh = { "beautysh" },
                 zsh = { "beautysh" },
+                nix = { "nixfmt" },
                 -- kotlin = { "ktlint" },
             },
             -- format_on_save = {

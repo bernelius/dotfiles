@@ -31,6 +31,7 @@ require("mason-tool-installer").setup({
         "pgformatter",
         "prettierd",
         "stylua",
+        "nixfmt",
     },
 })
 
