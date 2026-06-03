@@ -41,3 +41,5 @@ require("mason-lspconfig").setup({
         },
     },
 })
+
+vim.lsp.enable('nixd')
