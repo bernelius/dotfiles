@@ -1,0 +1,9 @@
+[user]
+    email = bob@bernelius.com
+    name = bernelius
+[diff]
+    tool = nvimtool
+[difftool "nvimtool"]
+    cmd = nvim -d "$LOCAL" "$REMOTE"
+[pull]
+    rebase = true
