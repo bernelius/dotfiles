@@ -3,20 +3,20 @@ local M = {}
 local state = require("scripts.state")
 local waybar_launcher = require("scripts.waybar_launcher")
 
-local function pidof(name)
-    local h = io.popen("pidof " .. name)
+local function is_waybar_active()
+    local h = io.popen("systemctl --user is-active waybar")
     if h then
         local out = h:read("*a")
         h:close()
-        return tonumber(out:match("%d+"))
+        return out:match("active") ~= nil
     end
-    return nil
+    return false
 end
 
 function M.toggle()
     hl.notification.get()
     -- health check: if waybar is missing, relaunch it and reset to defaults
-    if not pidof("waybar") then
+    if not is_waybar_active() then
         waybar_launcher.launch()
         state.gap_size = state.max_gap_size
         state.waybar_visible = true
@@ -36,8 +36,8 @@ function M.toggle()
     -- apply gap using the Hyprland Lua API
     hl.config({ general = { gaps_out = state.gap_size } })
 
-    -- toggle waybar visibility via SIGUSR1 (always targets live process)
-    os.execute("killall -s USR1 waybar 2>/dev/null")
+    -- toggle waybar visibility via SIGUSR1 via systemd (always targets live process)
+    os.execute("systemctl --user kill -s USR1 waybar")
 end
 
 return M

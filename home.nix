@@ -7,6 +7,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  targets.genericLinux.enable = true;
+
   imports = [
     ./modules/shell
     ./modules/term
