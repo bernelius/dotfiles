@@ -44,9 +44,9 @@
       set -g @catppuccin_pane_border_status "off"
 
       # modify bg to be darker
-      set -ogq @thm_bg "#121212"
-      set -ogq @thm_mantle "#121212"
-      set -ogq @thm_crust "yellow"
+      set -gq @thm_bg "#121212"
+      set -gq @thm_mantle "#121212"
+      set -gq @thm_crust "yellow"
 
       # status left look and feel
       set -g status-left-length 100

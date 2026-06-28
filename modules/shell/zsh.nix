@@ -37,17 +37,17 @@
       }
     ];
 
-    initExtraFirst = ''
-      stty -ixon
+    initContent = lib.mkMerge [
+      (lib.mkBefore ''
+        stty -ixon
 
-      # zsh-vi-mode hook for starship (must be defined before plugin loads)
-      function zvm_after_init() {
-        eval "$(starship init zsh)"
-        export PROMPT2='Unclosed %_: '
-      }
-    '';
-
-    initExtra = ''
+        # zsh-vi-mode hook for starship (must be defined before plugin loads)
+        function zvm_after_init() {
+          eval "$(starship init zsh)"
+          export PROMPT2='Unclosed %_: '
+        }
+      '')
+      ''
       export PS1='%n %3~ %# '
       export EDITOR="nvim"
       export MANPAGER="nvim +Man!"
@@ -65,6 +65,10 @@
       esac
 
       export PATH="$HOME/.cargo/bin:$PATH"
+
+      function open {
+          xdg-open "$1" > /dev/null 2>&1 &; disown
+      }
 
       # case-insensitive matching
       autoload -Uz compinit && compinit
@@ -132,7 +136,8 @@
       else
           alias s=$'echo "\nDon\'t tmux your tmux.\n"'
       fi
-    '';
+    ''
+    ];
 
     loginExtra = ''
       tailscale up --operator="$USER"
