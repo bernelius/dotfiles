@@ -3,18 +3,24 @@
 {
   programs.hyprlock = {
     enable = true;
+    package = null;
+
     settings = {
+      source = "~/.config/hypr/themes/mocha.conf";
+
       general = {
         hide_cursor = true;
         grace = 0;
         disable_loading_bar = true;
       };
+
       animation = [
         { name = "global"; value = 0; }
       ];
+
       background = [
         {
-          monitor = "eDP-1";
+          monitor = "";
           blur_passes = 1;
           contrast = 1;
           brightness = 0.2;
@@ -22,9 +28,10 @@
           vibrancy_darkness = 1;
         }
       ];
+
       "input-field" = [
         {
-          monitor = "eDP-1";
+          monitor = "";
           size = "20%, 5%";
           outline_thickness = 15;
           dots_size = 0.2;
@@ -49,9 +56,10 @@
           zindex = 2;
         }
       ];
+
       label = [
         {
-          monitor = "eDP-1";
+          monitor = "";
           text = "$USER";
           color = "$text";
           font_size = 30;
@@ -62,7 +70,7 @@
           zindex = 1;
         }
         {
-          monitor = "eDP-1";
+          monitor = "";
           text = "$TIME";
           color = "$overlay1";
           font_size = 30;
@@ -74,8 +82,5 @@
         }
       ];
     };
-    extraConfig = ''
-      source = ~/.config/hypr/themes/mocha.conf
-    '';
   };
 }
