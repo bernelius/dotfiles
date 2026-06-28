@@ -3,15 +3,17 @@
 {
   services.mako = {
     enable = true;
-    font = "JetBrainsMonoNL Nerd Font Mono (monospace)";
-    backgroundColor = "#121212";
-    width = 350;
-    height = 200;
-    borderColor = "#cdd6f4";
-    progressColor = "#a6e3a1";
-    textColor = "#cdd6f4";
-    defaultTimeout = 5000;
-    anchor = "top-right";
+    settings = {
+      font = "JetBrainsMonoNL Nerd Font Mono (monospace)";
+      background-color = "#121212";
+      width = 350;
+      height = 200;
+      border-color = "#cdd6f4";
+      progress-color = "#a6e3a1";
+      text-color = "#cdd6f4";
+      default-timeout = 5000;
+      anchor = "top-right";
+    };
 
     extraConfig = ''
       [urgency=low]

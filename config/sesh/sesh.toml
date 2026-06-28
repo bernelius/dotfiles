@@ -14,8 +14,8 @@ windows = ["lazygit"]
 
 [[session]]
 name = "nvim config"
-path = "~/dotfiles/.config/nvim"
-startup_command = "ROOT=~/dotfiles/.config/nvim && clear && figlet -w 100 -f big 'nvim config' | lolcat; exec $SHELL -i"
+path = "~/dotfiles/config/nvim"
+startup_command = "ROOT=~/dotfiles/config/nvim && clear && figlet -w 100 -f big 'nvim config' | lolcat; exec $SHELL -i"
 windows = ["lazygit"]
 
 [[session]]

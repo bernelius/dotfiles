@@ -37,7 +37,7 @@ Window("lazygit", "lazygit")
 Window("logs", "cd ~/.local/share/abrechnung/logs")
 
 Session("dotfiles", "~/dotfiles/.config")
-Session("nvim config", "~/dotfiles/.config/nvim")
+Session("nvim config", "~/dotfiles/config/nvim")
 Session("zsh config", "~/dotfiles/.config/zsh")
 Session("zmk workspace", "~/code/zmk-workspace")
 Session("VekstbarometerUSN", "~/code/vekstbarometer/indicator-updater")
