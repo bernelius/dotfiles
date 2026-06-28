@@ -1,0 +1,161 @@
+{ config, pkgs, lib, ... }:
+
+{
+  programs.waybar = {
+    enable = true;
+    systemd.enable = false; # We manage this manually via hyprland autostart + our own systemd service
+    settings = {
+      mainBar = {
+        layer = "top";
+        position = "top";
+        reload_style_on_change = true;
+        modules-left = [ "custom/notification" "custom/space" "clock" ];
+        modules-center = [ "hyprland/workspaces" ];
+        modules-right = [ "group/expand" "memory" "cpu" "bluetooth" "network#general" "network#wifi" "custom/vpn" "battery" ];
+
+        "hyprland/workspaces" = {
+          format = "{icon}";
+          format-icons = {
+            "1" = "W";
+            "2" = "D";
+            "3" = "N";
+            "4" = "T";
+            "5" = "P";
+            "6" = "G";
+            "active" = "";
+            "special" = "X";
+          };
+          persistent-workspaces = {
+            "eDP-1" = [ 1 2 3 4 5 6 ];
+            "HDMI-A-1" = [ 7 ];
+          };
+          show-special = true;
+          special-visible-only = true;
+        };
+
+        "custom/notification" = {
+          tooltip = false;
+          format = "";
+          on-click = "makoctl restore";
+          "on-click-right" = "makoctl dismiss --all";
+          escape = true;
+        };
+
+        "custom/space" = {
+          tooltip = false;
+          format = " ";
+        };
+
+        clock = {
+          format = "{:%d %b | %H:%M}";
+          interval = 1;
+          tooltip-format = "<tt>{calendar}</tt>";
+          calendar = {
+            format = {
+              today = "<span color='#f38ba8'><b>{}</b></span>";
+            };
+          };
+          actions = {
+            "on-click-right" = "shift_down";
+            on-click = "shift_up";
+          };
+        };
+
+        "network#general" = {
+          "format-wifi" = "";
+          "format-ethernet" = "";
+          "format-disconnected" = "";
+          "format-linked" = "";
+          "tooltip-format-ethernet" = "{ifname}";
+        };
+
+        "network#wifi" = {
+          interface = "wlan0";
+          "format-wifi" = "";
+          "tooltip-format-wifi" = "{essid} ({signalStrength}%)";
+          on-click = "alacritty --class=fuzzel -e 'gazelle'";
+        };
+
+        "custom/vpn" = {
+          exec = "nmcli -t -f DEVICE,TYPE,STATE device | grep -E ':(wireguard|dummy):connected' >/dev/null && echo  || echo ''";
+          tooltip = true;
+          "tooltip-format" = "VPN active";
+          interval = 5;
+        };
+
+        bluetooth = {
+          "format-on" = "󰂯";
+          "format-off" = "BT-off";
+          "format-connected" = "󰂯";
+          "format-disabled" = "󰂲";
+          "tooltip-format" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+          "tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+          "tooltip-format-enumerate-connected" = "{device_alias}\n{device_address}";
+          "tooltip-format-enumerate-connected-battery" = "{device_alias}\n{device_address}\n{device_battery_percentage}%";
+          on-click = "alacritty --class=fuzzel -e 'bluetui'";
+        };
+
+        battery = {
+          tooltip = true;
+          interval = 30;
+          states = {
+            good = 95;
+            warning = 40;
+            critical = 20;
+          };
+          "tooltip-format" = "{capacity}%";
+          format = "{icon}";
+          "format-charging" = "󰂄";
+          "format-plugged" = "󰂄 ";
+          "format-alt" = "{time} {icon}";
+          "format-icons" = [ "󰁻" "󰁼" "󰁾" "󰂀" "󰂂" "󰁹" ];
+        };
+
+        memory = {
+          format = "{percentage}% ";
+          "tooltip-format" = "{used}GiB/{total}GiB Used";
+          on-click = "alacritty --class=fuzzel -e 'btop'";
+        };
+
+        cpu = {
+          format = "{usage}% ";
+          tooltip = true;
+          on-click = "alacritty --class=fuzzel -e 'btop'";
+        };
+
+        "custom/expand" = {
+          format = "";
+          tooltip = false;
+        };
+
+        "custom/endpoint" = {
+          format = "|";
+          tooltip = false;
+        };
+
+        "group/expand" = {
+          orientation = "horizontal";
+          drawer = {
+            "transition-duration" = 600;
+            "transition-to-left" = true;
+            "click-to-reveal" = true;
+          };
+          modules = [ "custom/expand" "temperature" "tray" "custom/endpoint" ];
+        };
+
+        temperature = {
+          "critical-threshold" = 80;
+          format = "";
+        };
+
+        tray = {
+          "icon-size" = 14;
+          spacing = 10;
+        };
+      };
+    };
+  };
+
+  xdg.configFile."waybar/style.css".source = ../../config/waybar/style.css;
+  xdg.configFile."waybar/catppuccin-mocha.css".source = ../../config/waybar/catppuccin-mocha.css;
+}
